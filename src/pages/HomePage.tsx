@@ -7,7 +7,9 @@ import { CtaBlock } from '../components/ui/CtaBlock';
 import { Divider } from '../components/ui/Divider';
 import SectionVisual from '../components/sections/SectionVisual';
 import { FadeIn } from '../components/ui/FadeIn';
+import ApplicationGrid from '../components/ApplicationGrid';
 import BrochureButton from '../components/BrochureButton';
+import { EcosystemImpact } from '../components/EcosystemImpact';
 
 interface HomePageProps {
     onNavigate: (m: AppModule) => void;
@@ -108,35 +110,35 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                             className="hero-title text-jb3-light text-4xl md:text-5xl font-bold tracking-tighter uppercase leading-[0.9] max-w-4xl mx-auto drop-shadow-2xl"
                         >
-                            INTELLIGENCE <br /> MANAGED.
+                            JB³Ai: The OS³ Enterprise Intelligence Architecture
                         </motion.h1>
                         <p className="hero-subtitle text-jb3-coolgray text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed drop-shadow-lg mt-4">
-                            The central operating layer for professional teams requiring high-fidelity intelligence, security, and asset production.
+                            A containerized, managed AI operating system deploying specialized modules for forensic analysis, automated workflows, secure communications, and high-impact social initiatives.
+                        </p>
+                        <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-7 mt-6">
+                            Welcome to the next evolution of corporate intelligence. Powered by our proprietary OS³ architecture, JB³Ai delivers a robust, secure ecosystem designed to handle demanding enterprise workloads without compromising on data sovereignty or speed. Our upgraded suite of six core applications is engineered to optimize every facet of your organization. Beyond operational excellence, our architecture powers accessible, AI-driven education across South Africa through integrated CSR initiatives.
                         </p>
                         <div className="flex flex-wrap justify-center gap-6 items-center pt-12">
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => onNavigate(AppModule.WORKSPACE)}
+                                onClick={() => {
+                                    const section = document.getElementById('applications');
+                                    if (section) {
+                                        section.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                }}
                                 className="btn-primary px-8 py-3 text-[10px] font-bold uppercase tracking-widest transition-colors"
                             >
-                                INITIALIZE LIVE DEMO
+                                Explore OS³ Suite
                             </motion.button>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => onNavigate(AppModule.OS3_INFO)}
+                                onClick={() => onNavigate(AppModule.DEMO_PORTAL)}
                                 className="border border-jb3-light text-jb3-light px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-jb3-divider transition-all"
                             >
-                                INTELLIGENCE HUB
-                            </motion.button>
-                            <motion.button
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                onClick={() => onNavigate(AppModule.BROCHURES)}
-                                className="border border-jb3-accent text-jb3-accent px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-jb3-accent/10 transition-all"
-                            >
-                                DOWNLOAD BROCHURES
+                                Access Live Demo
                             </motion.button>
                         </div>
                     </FadeIn>
@@ -225,7 +227,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 </div>
             </section>
 
-            <section className="w-full bg-[#050505] py-12 flex justify-center border-t border-gray-900/50">
+            <section id="applications" className="w-full bg-[#050505] py-12 flex justify-center border-t border-gray-900/50">
                 <div className="max-w-6xl w-full px-10 space-y-24">
                     <div className="space-y-6">
                         <FadeIn>
@@ -294,61 +296,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             <Divider />
 
             <section className="w-full bg-[#080808] py-12 flex justify-center">
-                <div className="max-w-6xl w-full px-10 space-y-24">
+                <div className="max-w-6xl w-full px-10 space-y-16">
                     <div className="space-y-6 text-center md:text-left">
                         <FadeIn>
                             <h2 className="section-heading text-2xl font-semibold uppercase tracking-tighter leading-tight">
-                                PRODUCTS & CAPABILITIES
+                                PRODUCT SUITE
                             </h2>
                         </FadeIn>
                         <FadeIn>
-                            <p className="text-xs text-gray-600 uppercase tracking-[0.4em] font-bold">Modular Intelligence Enclaves</p>
+                            <p className="text-xs text-gray-600 uppercase tracking-[0.4em] font-bold">Six core modules for enterprise intelligence and social impact</p>
                         </FadeIn>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 bg-gray-900/40 border border-gray-900">
-                        {[
-                            { id: AppModule.INVESTIGATOR_AI, title: "Investigator AI", sub: "Structured Intelligence for Complex Decisions", color: "cyan", desc: "Investigator AI is designed for organisations that need to understand complex situations quickly, accurately, and defensibly. It brings together fragmented data, documents, communications, and signals into a structured intelligence environment where analysis can be trusted." },
-                            { id: AppModule.MINDCARE_AI, title: "MindCare AI", sub: "Human-Centric Intelligence Support", color: "emerald", desc: "MindCare AI is designed to support people, not replace them. It provides structured, ethical, and human-aware assistance within the OS³ environment." }
-                        ].map((prod, idx) => (
-                            <motion.div
-                                key={prod.id}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.15 }}
-                                className="bg-[#050505] p-16 space-y-8 group hover:bg-white/[0.03] transition-all"
-                            >
-                                <div className="space-y-4">
-                                    <h3 className={`text-white text-xs md:text-sm uppercase font-bold tracking-widest leading-tight hover:text-${prod.color}-400 transition-colors`}>
-                                        {prod.title}
-                                    </h3>
-                                    <p className={`text-[10px] text-${prod.color}-400/80 uppercase tracking-[0.2em] font-bold`}>
-                                        {prod.sub}
-                                    </p>
-                                </div>
-                                <p className="text-[11px] md:text-xs text-gray-500 uppercase tracking-widest leading-relaxed">
-                                    {prod.desc}
-                                </p>
-                                <div className="flex flex-wrap gap-4 items-center">
-                                    <button
-                                        onClick={() => onNavigate(prod.id)}
-                                        className="text-[9px] font-bold text-white/40 uppercase tracking-[0.3em] hover:text-white flex items-center gap-2 group-hover:gap-4 transition-all"
-                                    >
-                                        Access Module <ArrowUpRight className="w-3 h-3" />
-                                    </button>
-                                    {(() => {
-                                        const kMap: any = {
-                                            [AppModule.INVESTIGATOR_AI]: 'investigator',
-                                            [AppModule.SHIELD_AI]: 'shield',
-                                            [AppModule.MINDCARE_AI]: 'mindcare'
-                                        };
-                                        return <BrochureButton k={kMap[prod.id]} label="PDF" className="px-3 py-2 text-[10px]" />;
-                                    })()}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+                    <ApplicationGrid />
+
+                            <EcosystemImpact />
                 </div>
             </section>
 

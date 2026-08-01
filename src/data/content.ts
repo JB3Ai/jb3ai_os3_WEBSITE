@@ -62,10 +62,16 @@ export const PAGE_METADATA: Record<AppModule, { title: string; description: stri
     description: "Video vault with product demos, instructional content, and project showcases.",
     path: "vvault"
   },
+  [AppModule.DEMO_PORTAL]: {
+    title: "Demo Portal | JB³Ai",
+    description: "Launch the JB³Ai sandbox portal and open app-specific experiences directly from the demo route.",
+    path: "demo",
+    robots: "noindex, nofollow"
+  },
   [AppModule.WORKSPACE]: {
     title: "OS³ Dash Demo | JB³Ai",
     description: "Demonstration environment for OS³ Dash. Access is gated and governed.",
-    path: "demo",
+    path: "demo/workspace",
     robots: "noindex, nofollow"
   },
   [AppModule.DEMO_SIGNUP]: {

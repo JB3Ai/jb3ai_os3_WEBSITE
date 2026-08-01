@@ -18,6 +18,7 @@ const ContactPage = React.lazy(() => import('./pages/ContactPage').then(m => ({ 
 const GenericDetailPage = React.lazy(() => import('./pages/GenericDetailPage').then(m => ({ default: m.GenericDetailPage })));
 const AdvisoryPage = React.lazy(() => import('./pages/AdvisoryPage').then(m => ({ default: m.AdvisoryPage })));
 const DemoWorkspacePage = React.lazy(() => import('./pages/DemoWorkspacePage').then(m => ({ default: m.DemoWorkspacePage })));
+const DemoPortalPage = React.lazy(() => import('./pages/DemoPortalPage').then(m => ({ default: m.DemoPortalPage })));
 const PolicyPage = React.lazy(() => import('./pages/PolicyPage').then(m => ({ default: m.PolicyPage })));
 const BrochuresPage = React.lazy(() => import('./pages/BrochuresPage').then(m => ({ default: m.BrochuresPage })));
 const VideoVaultPage = React.lazy(() => import('./pages/VideoVaultPage').then(m => ({ default: m.VideoVaultPage })));
@@ -272,6 +273,8 @@ const App: React.FC = () => {
         return <BrochuresPage onNavigate={navigate} />;
       case AppModule.VIDEO_VAULT:
         return <VideoVaultPage onNavigate={navigate} />;
+      case AppModule.DEMO_PORTAL:
+        return <DemoPortalPage onNavigate={navigate} />;
       case AppModule.INVESTIGATOR_AI:
       case AppModule.MINDCARE_AI:
       case AppModule.PHONE_SYSTEM:
