@@ -82,8 +82,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                         </video>
                     )}
 
-                    {/* Green Haze Layer */}
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(102,255,102,0.1)_0%,_transparent_60%)] z-[2] pointer-events-none mix-blend-screen" />
+                    {/* Warm Accent Layer */}
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(248,182,70,0.04)_0%,transparent_60%)] z-[2] pointer-events-none mix-blend-screen" />
 
                     {/* Dark Overlay Layer */}
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(25,25,25,0.2)_0%,_rgba(5,5,5,1)_80%)] z-[5] pointer-events-none" />
@@ -101,8 +101,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
                 <div className="hero-fg hero-content relative z-10 pointer-events-auto">
                     <FadeIn className="space-y-12">
-                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-4">
-                            <Zap className="w-4 h-4 text-cyan-400" /> OS³ Stable v2.0
+                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900/50 border border-slate-800 rounded-full text-xs font-bold text-slate-300 uppercase tracking-[0.3em] mb-4">
+                            <Zap className="w-4 h-4 text-amber-300" /> OS³ Stable v2.0
                         </div>
                         <motion.h1
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -136,7 +136,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 onClick={() => onNavigate(AppModule.DEMO_PORTAL)}
-                                className="border border-jb3-light text-jb3-light px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-jb3-divider transition-all"
+                                className="border border-slate-700 text-slate-100 px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-slate-800 transition-all"
                             >
                                 Access Live Demo
                             </motion.button>
@@ -227,7 +227,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 </div>
             </section>
 
-            <section id="applications" className="w-full bg-[#050505] py-12 flex justify-center border-t border-gray-900/50">
+            <section id="applications" className="w-full bg-slate-950 py-12 flex justify-center border-t border-slate-800/50">
                 <div className="max-w-6xl w-full px-10 space-y-24">
                     <div className="space-y-6">
                         <FadeIn>
@@ -295,7 +295,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
             <Divider />
 
-            <section className="w-full bg-[#080808] py-12 flex justify-center">
+            <section className="w-full bg-slate-900 py-12 flex justify-center">
                 <div className="max-w-6xl w-full px-10 space-y-16">
                     <div className="space-y-6 text-center md:text-left">
                         <FadeIn>
@@ -314,7 +314,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 </div>
             </section>
 
-            <section className="w-full bg-[#050505] py-12 flex justify-center border-t border-gray-900/50">
+            <section className="w-full bg-slate-950 py-12 flex justify-center border-t border-slate-800/50">
                 <div className="max-w-4xl w-full px-10 space-y-16 text-center">
                     <div className="flex flex-col items-center space-y-6">
                         <FadeIn><div className="w-12 h-[1px] bg-gray-800" /></FadeIn>
@@ -382,7 +382,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
             <Divider />
 
-            <section className="w-full bg-[#080808] py-12 flex justify-center border-t border-gray-900/50">
+            <section className="w-full bg-slate-900 py-12 flex justify-center border-t border-slate-800/50">
                 <div className="max-w-4xl w-full px-10 space-y-16">
                     <div className="space-y-6">
                         <FadeIn>
@@ -432,7 +432,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
             <Divider />
 
-            <section className="w-full bg-[#080808] py-12 flex justify-center border-t border-gray-900/50">
+            <section className="w-full bg-slate-900 py-12 flex justify-center border-t border-slate-800/50">
                 <div className="max-w-4xl w-full px-10 space-y-12">
                     <div className="space-y-6">
                         <FadeIn>
@@ -512,7 +512,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 <motion.div
                     animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.1, 1] }}
                     transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none"
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-400/5 blur-[120px] rounded-full pointer-events-none"
                 />
             </section>
         </div>
