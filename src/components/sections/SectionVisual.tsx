@@ -8,7 +8,7 @@ type SectionVisualProps = {
   className?: string;
 };
 
-export default function SectionVisual({
+export function SectionVisual({
   videoSrc,
   imageSrc,
   label,

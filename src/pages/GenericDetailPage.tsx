@@ -6,7 +6,7 @@ import { AppModule } from '../types';
 import { DashboardBackdrop } from '../components/ui/DashboardBackdrop';
 import { CtaBlock } from '../components/ui/CtaBlock';
 import { FadeIn } from '../components/ui/FadeIn';
-import BrochureButton from '../components/BrochureButton';
+import { BrochureButton } from '../components/BrochureButton';
 import { BrochureKey } from '../content/brochures';
 import { Divider } from '../components/ui/Divider';
 import { PRODUCT_CONTENT, PAGE_METADATA, SHARED_TRUST_LINE } from '../data/content';

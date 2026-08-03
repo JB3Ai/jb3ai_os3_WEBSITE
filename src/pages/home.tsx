@@ -1,6 +1,6 @@
-import SectionVisual from "../components/sections/SectionVisual";
+import { SectionVisual } from "../components/sections/SectionVisual";
 
-export default function Home() {
+export function Home() {
   return (
     <>
       <SectionVisual

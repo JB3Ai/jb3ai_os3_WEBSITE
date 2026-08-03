@@ -5,7 +5,7 @@ import { DashboardBackdrop } from '../components/ui/DashboardBackdrop';
 import { SectionHeader } from '../components/ui/SectionHeader';
 import { CtaBlock } from '../components/ui/CtaBlock';
 import { FadeIn } from '../components/ui/FadeIn';
-import BrochureButton from '../components/BrochureButton';
+import { BrochureButton } from '../components/BrochureButton';
 
 interface OS3DashInfoPageProps {
     onNavigate: (m: AppModule) => void;

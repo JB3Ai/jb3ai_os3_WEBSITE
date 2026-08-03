@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { AppModule } from '../types';
-import ModuleGrid, { MODULES as DEMO_MODULES } from '../components/ModuleGrid';
+import { ModuleGrid, MODULES as DEMO_MODULES } from '../components/ModuleGrid';
 
 interface DemoPortalPageProps {
   onNavigate: (m: AppModule) => void;

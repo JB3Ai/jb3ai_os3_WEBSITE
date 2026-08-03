@@ -1,16 +1,16 @@
-type SectionVisualProps = {
+type VisualBreakProps = {
   videoSrc?: string;
   imageSrc: string;
   label?: string;
   className?: string;
 };
 
-export default function SectionVisual({
+export function VisualBreak({
   videoSrc,
   imageSrc,
   label,
   className = "",
-}: SectionVisualProps) {
+}: VisualBreakProps) {
   return (
     <section className={`relative w-full my-24 ${className}`}>
       {label ? (

@@ -227,5 +227,3 @@ export const EcosystemImpact: React.FC = () => {
     </section>
   );
 };
-
-export default EcosystemImpact;

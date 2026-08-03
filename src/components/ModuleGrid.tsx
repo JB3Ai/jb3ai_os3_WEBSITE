@@ -326,7 +326,7 @@ export interface ModuleGridProps {
   selectedId?: string;
 }
 
-const ModuleGrid: React.FC<ModuleGridProps> = ({ onSelect, onNavigate, selectedId }) => {
+export const ModuleGrid: React.FC<ModuleGridProps> = ({ onSelect, onNavigate, selectedId }) => {
   const handleClick = (m: ModuleItem) => {
     const id = m.demoId || m.id;
     if (onSelect) {
@@ -382,5 +382,3 @@ const ModuleGrid: React.FC<ModuleGridProps> = ({ onSelect, onNavigate, selectedI
     </div>
   );
 };
-
-export default ModuleGrid;

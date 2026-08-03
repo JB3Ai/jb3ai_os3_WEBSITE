@@ -1,7 +1,7 @@
 import React from "react";
 import { BROCHURES, BrochureKey } from "../content/brochures";
 
-export default function BrochureButton({
+export function BrochureButton({
     k,
     label = "Download brochure (PDF)",
     className = "",

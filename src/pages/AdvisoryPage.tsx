@@ -7,7 +7,7 @@ import { SectionHeader } from '../components/ui/SectionHeader';
 import { CtaBlock } from '../components/ui/CtaBlock';
 import { CredibilityStrip } from '../components/ui/CredibilityStrip';
 import { FadeIn } from '../components/ui/FadeIn';
-import BrochureButton from '../components/BrochureButton';
+import { BrochureButton } from '../components/BrochureButton';
 import { Divider } from '../components/ui/Divider';
 
 interface AdvisoryPageProps {

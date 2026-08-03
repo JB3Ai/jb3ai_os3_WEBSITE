@@ -1,5 +1,5 @@
 import React from 'react';
-import ModuleGrid from './ModuleGrid';
+import { ModuleGrid } from './ModuleGrid';
 
 export const ApplicationGrid: React.FC = () => {
   return (
@@ -22,5 +22,3 @@ export const ApplicationGrid: React.FC = () => {
     </section>
   );
 };
-
-export default ApplicationGrid;

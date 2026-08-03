@@ -3,7 +3,7 @@ import React from 'react';
 import { AppModule } from '../types';
 import { DashboardBackdrop } from '../components/ui/DashboardBackdrop';
 import { FadeIn } from '../components/ui/FadeIn';
-import ModuleGrid from '../components/ModuleGrid';
+import { ModuleGrid } from '../components/ModuleGrid';
 import { SHARED_TRUST_LINE } from '../data/content';
 
 interface AppsListPageProps {

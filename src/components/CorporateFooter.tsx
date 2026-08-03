@@ -99,5 +99,3 @@ export const CorporateFooter: React.FC = () => {
     </footer>
   );
 };
-
-export default CorporateFooter;
