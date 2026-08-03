@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AppModule } from '../types';
 import { BROCHURES } from '../content/brochures';
+import { CorporateFooter } from '../components/CorporateFooter';
 
 interface MarketingLayoutProps {
   children: React.ReactNode;
@@ -178,74 +179,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({
           {children}
         </main>
 
-        <footer className="border-t border-gray-900 bg-black py-32 px-10 pointer-events-auto z-10 relative">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16">
-            <div className="space-y-8">
-              <div className="flex items-center gap-3">
-                <img src="/media/ui/jb3ai-mark.svg" alt="JB³Ai" className="h-[18px] w-auto" />
-                <h5 className="text-white text-xs font-bold tracking-[0.3em] uppercase">JB³Ai Corporation</h5>
-              </div>
-              <p className="text-[10px] text-gray-600 max-w-sm leading-relaxed uppercase tracking-[0.2em]">JB³Ai builds governed intelligence systems for organizations operating at scale, complexity, and risk. We unify AI, operations, security, and decision-making into controlled, auditable environments.</p>
-              <div className="pt-4">
-                <button
-                  onClick={() => navigate(AppModule.CONSULTING)}
-                  className="btn-primary bg-white text-black px-8 py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors"
-                >
-                  Book Expert Advisor
-                </button>
-              </div>
-            </div>
-            <div className="flex flex-wrap gap-24">
-              <div className="space-y-6">
-                <h6 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">Products</h6>
-                <p className="text-[9px] text-gray-700 leading-relaxed max-w-[200px]">All products operate within the OS³ governed kernel unless deployed standalone.</p>
-                <div className="flex flex-col gap-4 text-[10px] text-gray-600 font-bold uppercase tracking-widest">
-                  <button onClick={() => navigate(AppModule.OS3_INFO)} className="hover:text-white transition-colors text-left uppercase">OS³ Dash</button>
-                  <button onClick={() => navigate(AppModule.MEDIA_LAB)} className="hover:text-white transition-colors text-left uppercase">Media Lab</button>
-                  <button onClick={() => navigate(AppModule.PHONE_SYSTEM)} className="hover:text-white transition-colors text-left uppercase">OS³ Voice Grid</button>
-                  <button onClick={() => navigate(AppModule.INVESTIGATOR_AI)} className="hover:text-white transition-colors text-left uppercase">Investigator AI</button>
-                  <button onClick={() => navigate(AppModule.SHIELD_AI)} className="hover:text-white transition-colors text-left uppercase">Shield AI</button>
-                  <button onClick={() => navigate(AppModule.MINDCARE_AI)} className="hover:text-white transition-colors text-left uppercase">MindCare AI</button>
-                  <button onClick={() => navigate(AppModule.CONSULTING)} className="hover:text-white transition-colors text-left uppercase">Consulting & Accelerator</button>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <h6 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">Engagement</h6>
-                <div className="flex flex-col gap-4 text-[10px] text-gray-600 font-bold uppercase tracking-widest">
-                  <button onClick={() => navigate(AppModule.CONSULTING)} className="hover:text-white transition-colors text-left uppercase">Advisory</button>
-                  <button onClick={() => navigate(AppModule.CONTACT)} className="hover:text-white transition-colors text-left uppercase">Contact</button>
-                  <button onClick={() => navigate(AppModule.WORKSPACE)} className="hover:text-white transition-colors text-left uppercase">Briefings</button>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <h6 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">Trust & Governance</h6>
-                <div className="flex flex-col gap-4 text-[10px] text-gray-600 font-bold uppercase tracking-widest">
-                  <button onClick={() => navigate(AppModule.GOVERNANCE)} className="hover:text-white transition-colors text-left uppercase">Governance Framework</button>
-                  <button onClick={() => navigate(AppModule.SECURITY)} className="hover:text-white transition-colors text-left uppercase">Security Architecture</button>
-                  <button onClick={() => navigate(AppModule.COMPLIANCE)} className="hover:text-white transition-colors text-left uppercase">Compliance & Risk</button>
-                  <button onClick={() => navigate(AppModule.TRUST)} className="hover:text-white transition-colors text-left uppercase">Ethical Use Policy</button>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <h6 className="text-[10px] font-bold text-gray-400 uppercase tracking-[0.3em]">Library</h6>
-                <div className="flex flex-col gap-4 text-[10px] text-gray-600 font-bold uppercase tracking-widest">
-                  <a href={BROCHURES.os3dash} target="_blank" rel="noreferrer" className="hover:text-white transition-colors text-left uppercase">OS³ Dash PDF</a>
-                  <a href={BROCHURES.investigator} target="_blank" rel="noreferrer" className="hover:text-white transition-colors text-left uppercase">InvestigatorAi PDF</a>
-                  <a href={BROCHURES.investment} target="_blank" rel="noreferrer" className="hover:text-white transition-colors text-left uppercase">Investment Deck</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-6xl mx-auto pt-32 flex flex-col md:flex-row justify-between items-center gap-8 border-t border-gray-900 mt-20">
-            <div className="text-[10px] text-gray-700 font-mono uppercase tracking-[0.2em]">
-              All demonstrations use sandboxed data. Deployments are governed, auditable, and subject to NDA. No client, institutional, or sensitive data is exposed in public environments.
-            </div>
-            <div className="hidden md:flex items-center gap-12 text-[10px] text-gray-700 font-mono uppercase tracking-[0.2em]">
-              <span>&copy; {new Date().getFullYear()} JB³Ai Corporation</span>
-              <span>S-L MODES ENABLED</span>
-            </div>
-          </div>
-        </footer>
+        <CorporateFooter />
       </div>
     </div>
   );
