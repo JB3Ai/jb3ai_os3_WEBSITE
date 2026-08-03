@@ -228,4 +228,3 @@ export const EcosystemImpact: React.FC = () => {
   );
 };
 
-export default EcosystemImpact;

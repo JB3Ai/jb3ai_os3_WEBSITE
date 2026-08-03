@@ -23,4 +23,3 @@ export const ApplicationGrid: React.FC = () => {
   );
 };
 
-export default ApplicationGrid;

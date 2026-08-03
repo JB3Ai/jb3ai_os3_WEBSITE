@@ -7,7 +7,7 @@ import { CtaBlock } from '../components/ui/CtaBlock';
 import { Divider } from '../components/ui/Divider';
 import SectionVisual from '../components/sections/SectionVisual';
 import { FadeIn } from '../components/ui/FadeIn';
-import ApplicationGrid from '../components/ApplicationGrid';
+import { ApplicationGrid } from '../components/ApplicationGrid';
 import BrochureButton from '../components/BrochureButton';
 import { EcosystemImpact } from '../components/EcosystemImpact';
 

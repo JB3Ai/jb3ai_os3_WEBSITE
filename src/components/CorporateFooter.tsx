@@ -100,4 +100,3 @@ export const CorporateFooter: React.FC = () => {
   );
 };
 
-export default CorporateFooter;
