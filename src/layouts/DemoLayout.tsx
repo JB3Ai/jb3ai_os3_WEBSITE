@@ -12,7 +12,7 @@ export const DemoLayout: React.FC<DemoLayoutProps> = ({ children, activeModule, 
   return (
     <div className="w-full h-screen bg-[#050505] text-gray-300 flex flex-col font-sans overflow-hidden p-6">
       {/* Main Workspace Panel */}
-      <div className="flex-1 os-panel rounded-sm h-full flex flex-col overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.9)] relative">
+      <div className="flex-1 os-panel h-full flex flex-col overflow-hidden shadow-[0_0_80px_rgba(0,0,0,0.9)] relative">
         
         {/* Dashboard Backdrop Layer - High Static Stability */}
         <div 
@@ -45,7 +45,7 @@ export const DemoLayout: React.FC<DemoLayoutProps> = ({ children, activeModule, 
       </div>
 
       <footer className="h-20 flex items-center justify-center z-20 pb-4 shrink-0">
-        <div className="flex items-center gap-2 bg-[#0a0a0a] px-4 py-2 rounded-lg border border-gray-800 shadow-2xl">
+        <div className="flex items-center gap-2 bg-[#0a0a0a] px-4 py-2 border border-gray-800 shadow-2xl">
           <DockItem 
             icon={<LayoutGrid className="w-5 h-5" />} 
             label="Hub" 
@@ -92,10 +92,10 @@ export const DemoLayout: React.FC<DemoLayoutProps> = ({ children, activeModule, 
 const DockItem: React.FC<{ icon: React.ReactNode, label: string, isActive?: boolean, onClick: () => void }> = ({ icon, label, isActive, onClick }) => (
   <button 
     onClick={onClick}
-    className={`group relative p-3 rounded-md transition-all duration-200 ${isActive ? 'bg-gray-800 text-white shadow-[inset_0_0_10px_rgba(255,255,255,0.05)]' : 'text-gray-500 hover:bg-gray-900 hover:text-gray-300'}`}
+    className={`group relative p-3 transition-all duration-200 ${isActive ? 'bg-gray-800 text-white shadow-[inset_0_0_10px_rgba(255,255,255,0.05)]' : 'text-gray-500 hover:bg-gray-900 hover:text-gray-300'}`}
   >
     {icon}
-    <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-800 font-os uppercase tracking-widest">
+    <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-gray-800 font-os uppercase tracking-widest">
       {label}
     </span>
   </button>

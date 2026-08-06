@@ -54,7 +54,7 @@ export const CorporateFooter: React.FC = () => {
               href={doc.path}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col justify-between p-5 bg-[#11151E]/60 border border-slate-800/80 rounded-lg hover:border-slate-600 hover:bg-[#151A24] transition-all group"
+              className="flex flex-col justify-between p-5 bg-[#11151E]/60 border border-slate-800/80 hover:border-slate-600 hover:bg-[#151A24] transition-all group"
             >
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 block mb-2">

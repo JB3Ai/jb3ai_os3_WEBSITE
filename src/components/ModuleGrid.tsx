@@ -197,7 +197,7 @@ export const OS3ModuleGrid: React.FC = () => {
           {MODULES.map((module) => (
             <div 
               key={module.id} 
-              className="flex flex-col h-full bg-[#11151E] border border-slate-800 rounded-xl p-6 transition-colors duration-200 hover:bg-[#151A24] hover:border-slate-600"
+              className="flex flex-col h-full bg-[#11151E] border border-slate-800 p-6 transition-colors duration-200 hover:bg-[#151A24] hover:border-slate-600"
             >
               
               {/* Card Header: Tag */}
@@ -353,11 +353,11 @@ export const ModuleGrid: React.FC<ModuleGridProps> = ({ onSelect, onNavigate, se
         return (
           <div
             key={m.id}
-            className={`group flex h-full flex-col justify-between rounded-3xl border bg-slate-900/95 p-6 transition-all ${isSelected ? 'border-amber-400/20 shadow-[0_20px_40px_rgba(248,182,70,0.08)]' : 'border-slate-800 hover:border-slate-700 hover:bg-slate-900'}`}
+            className={`group flex h-full flex-col justify-between border bg-slate-900/95 p-6 transition-all ${isSelected ? 'border-amber-400/20 shadow-[0_20px_40px_rgba(248,182,70,0.08)]' : 'border-slate-800 hover:border-slate-700 hover:bg-slate-900'}`}
             onClick={() => handleClick(m)}
           >
             <div className="space-y-4">
-              <span className="inline-flex rounded-full border border-slate-700 bg-slate-950 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-slate-300">
+              <span className="inline-flex border border-slate-700 bg-slate-950 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-slate-300">
                 {m.tag}
               </span>
               <h3 className="text-xl font-semibold text-slate-100">{m.title}</h3>
@@ -370,7 +370,7 @@ export const ModuleGrid: React.FC<ModuleGridProps> = ({ onSelect, onNavigate, se
                   event.stopPropagation();
                   if (m.primaryPdf) window.open(m.primaryPdf.path, '_blank', 'noopener,noreferrer');
                 }}
-                className="rounded-full border border-slate-700 bg-slate-950 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-slate-100 transition-colors hover:border-slate-600 hover:bg-slate-800"
+                className="border border-slate-700 bg-slate-950 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-slate-100 transition-colors hover:border-slate-600 hover:bg-slate-800"
               >
                 {m.primaryPdf?.label || 'Details'}
               </button>

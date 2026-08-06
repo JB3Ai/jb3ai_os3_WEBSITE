@@ -132,7 +132,7 @@ export const GenericDetailPage: React.FC<GenericDetailPageProps> = ({ module, on
                                 {content.whoItIsFor}
                             </p>
                         </div>
-                        <div className="space-y-6 p-8 border border-gray-900 bg-white/5 rounded-sm">
+                        <div className="space-y-6 p-8 border border-gray-900 bg-white/5">
                             <h3 className="text-[10px] font-bold text-cyan-500 uppercase tracking-[0.3em]">{content.governanceLabel || "Governance Note"}</h3>
                             <p className="text-[11px] leading-relaxed uppercase tracking-widest text-gray-300">
                                 {content.governanceNote}

@@ -74,7 +74,7 @@ export function SectionVisual({
         </div>
       ) : null}
 
-      <div className="relative w-full aspect-video overflow-hidden rounded-2xl bg-black">
+      <div className="relative w-full aspect-video overflow-hidden bg-black">
         {/* Fallback image - Always rendered, stays until video is playing (if opaque) or behind video (if transparent) */}
         <img
           src={imageSrc}

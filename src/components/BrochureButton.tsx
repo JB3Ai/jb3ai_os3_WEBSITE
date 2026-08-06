@@ -15,7 +15,7 @@ export function BrochureButton({
             <button
                 disabled
                 className={
-                    "inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-[10px] tracking-[0.18em] uppercase opacity-40 cursor-not-allowed " +
+                    "inline-flex items-center justify-center border border-white/15 bg-white/5 px-5 py-3 text-[10px] tracking-[0.18em] uppercase opacity-40 cursor-not-allowed " +
                     className
                 }
             >
@@ -30,7 +30,7 @@ export function BrochureButton({
             target="_blank"
             rel="noopener noreferrer"
             className={
-                "inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-white/10 transition-all " +
+                "inline-flex items-center justify-center border border-white/15 bg-white/5 px-5 py-3 text-[12px] tracking-[0.18em] uppercase hover:bg-white/10 transition-all " +
                 className
             }
         >

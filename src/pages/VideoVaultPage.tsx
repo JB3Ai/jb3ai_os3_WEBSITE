@@ -280,13 +280,13 @@ const VaultCard: React.FC<{
       onMouseEnter={onCardEnter}
       onMouseLeave={handleMouseLeave}
       style={{ willChange: 'transform', transition: 'border-color .25s, box-shadow .25s, transform .15s' }}
-      className="group relative cursor-pointer rounded-[20px] overflow-hidden border border-white/[.07] bg-[#0d1120] backdrop-blur-sm"
+      className="group relative cursor-pointer overflow-hidden border border-white/[.07] bg-[#0d1120] backdrop-blur-sm"
     >
       {/* Glass sheen */}
-      <div className="absolute inset-0 rounded-[20px] bg-gradient-to-br from-white/[.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/[.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-[1]" />
 
       {/* Thumbnail */}
-      <div className="relative w-full aspect-video overflow-hidden rounded-t-[20px] bg-[#090d18]">
+      <div className="relative w-full aspect-video overflow-hidden bg-[#090d18]">
         {isPlaying ? (
           isYouTube(video.url) ? (
             <iframe
@@ -322,19 +322,19 @@ const VaultCard: React.FC<{
             <div className="absolute left-0 right-0 h-[60px] bg-gradient-to-b from-transparent via-[#39FF88]/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-[scanDown_1.4s_linear_infinite] pointer-events-none" />
             {/* Play button */}
             <div className="absolute inset-0 flex items-center justify-center z-[5]">
-              <div className="w-14 h-14 rounded-full border-[1.5px] border-white/20 flex items-center justify-center bg-[#0b0f1a]/40 backdrop-blur-sm transition-all duration-300 group-hover:border-[#39FF88] group-hover:bg-[#39FF88]/[.12] group-hover:shadow-[0_0_24px_rgba(57,255,136,.25)]">
+              <div className="w-14 h-14 border-[1.5px] border-white/20 flex items-center justify-center bg-[#0b0f1a]/40 backdrop-blur-sm transition-all duration-300 group-hover:border-[#39FF88] group-hover:bg-[#39FF88]/[.12] group-hover:shadow-[0_0_24px_rgba(57,255,136,.25)]">
                 <div className="w-0 h-0 ml-1 border-solid border-y-[8px] border-y-transparent border-l-[16px] border-l-white/70 transition-colors duration-300 group-hover:border-l-[#39FF88]" />
               </div>
             </div>
             {/* Corner brackets */}
-            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#39FF88] rounded-tl-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[6]" />
-            <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#39FF88] rounded-tr-[20px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[6]" />
+            <div className="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-[#39FF88] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[6]" />
+            <div className="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-[#39FF88] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[6]" />
             <div className="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-[#00D9FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[6]" />
             <div className="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-[#00D9FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[6]" />
             {/* Lock label */}
             <span className="absolute top-3 left-3 font-mono text-[8px] tracking-[.15em] uppercase text-white/20 group-hover:text-[#39FF88] transition-colors duration-300 z-[6]">● LOCKED</span>
             {/* Duration */}
-            <span className="absolute bottom-3 right-3 font-mono text-[10px] tracking-[.1em] text-white/60 bg-[#0b0f1a]/60 px-2.5 py-1 border border-white/10 rounded-md backdrop-blur-sm group-hover:text-[#39FF88] group-hover:border-[#39FF88]/30 transition-all duration-300 z-[6]">
+            <span className="absolute bottom-3 right-3 font-mono text-[10px] tracking-[.1em] text-white/60 bg-[#0b0f1a]/60 px-2.5 py-1 border border-white/10 backdrop-blur-sm group-hover:text-[#39FF88] group-hover:border-[#39FF88]/30 transition-all duration-300 z-[6]">
               {video.duration}
             </span>
           </>
@@ -344,7 +344,7 @@ const VaultCard: React.FC<{
       {/* Body */}
       <div className="relative px-6 py-5 z-[2]">
         {/* Neural gradient left bar on hover */}
-        <div className="absolute left-0 top-[20%] bottom-[20%] w-[2px] rounded-full bg-gradient-to-b from-[#39FF88] to-[#8B5CFF] scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-350 shadow-[0_0_8px_rgba(57,255,136,.3)]" />
+        <div className="absolute left-0 top-[20%] bottom-[20%] w-[2px] bg-gradient-to-b from-[#39FF88] to-[#8B5CFF] scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-350 shadow-[0_0_8px_rgba(57,255,136,.3)]" />
 
         <p className="font-mono text-[9px] tracking-[.22em] uppercase text-white/18 mb-2.5">
           Ref: <span className="bg-gradient-to-r from-[#39FF88] to-[#8B5CFF] bg-clip-text text-transparent">{video.ref}</span>
@@ -356,7 +356,7 @@ const VaultCard: React.FC<{
           {video.description}
         </p>
         <div className="flex items-center justify-between">
-          <span className={`font-['Orbitron',monospace] text-[8px] font-bold tracking-[.18em] uppercase px-3.5 py-1.5 rounded-full border ${meta.tagClass}`}>
+          <span className={`font-['Orbitron',monospace] text-[8px] font-bold tracking-[.18em] uppercase px-3.5 py-1.5 border ${meta.tagClass}`}>
             {meta.label}
           </span>
           <span className="font-mono text-[9px] tracking-[.2em] uppercase bg-gradient-to-r from-[#39FF88] to-[#8B5CFF] bg-clip-text text-transparent opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
@@ -426,8 +426,8 @@ export const VideoVaultPage: React.FC<{ onNavigate: (m: AppModule) => void }> = 
         <div className="absolute inset-0 z-[1] pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_25%,rgba(11,15,26,.92)_100%)]" />
 
         {/* Glow blobs */}
-        <div className="absolute top-[12%] left-[8%] w-[650px] h-[380px] rounded-full bg-[#39FF88] blur-[80px] opacity-[.16] pointer-events-none z-[1] animate-[blobDrift_8s_ease-in-out_infinite_alternate]" />
-        <div className="absolute bottom-[18%] right-[8%] w-[550px] h-[320px] rounded-full bg-[#8B5CFF] blur-[80px] opacity-[.16] pointer-events-none z-[1] animate-[blobDrift_10s_ease-in-out_infinite_alternate-reverse]" />
+        <div className="absolute top-[12%] left-[8%] w-[650px] h-[380px] bg-[#39FF88] blur-[80px] opacity-[.16] pointer-events-none z-[1] animate-[blobDrift_8s_ease-in-out_infinite_alternate]" />
+        <div className="absolute bottom-[18%] right-[8%] w-[550px] h-[320px] bg-[#8B5CFF] blur-[80px] opacity-[.16] pointer-events-none z-[1] animate-[blobDrift_10s_ease-in-out_infinite_alternate-reverse]" />
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -436,8 +436,8 @@ export const VideoVaultPage: React.FC<{ onNavigate: (m: AppModule) => void }> = 
           className="relative z-[2] px-5"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 border border-[#39FF88]/25 bg-[#39FF88]/[.06] px-5 py-2 mb-7 rounded-full backdrop-blur-sm">
-            <span className="w-[5px] h-[5px] bg-[#39FF88] rounded-full shadow-[0_0_6px_#39FF88] animate-pulse" />
+          <div className="inline-flex items-center gap-2 border border-[#39FF88]/25 bg-[#39FF88]/[.06] px-5 py-2 mb-7 backdrop-blur-sm">
+            <span className="w-[5px] h-[5px] bg-[#39FF88] shadow-[0_0_6px_#39FF88] animate-pulse" />
             <span className="font-mono text-[10px] tracking-[.25em] uppercase text-[#39FF88]">
               Visual Intelligence Archive &nbsp;·&nbsp; {String(VIDEOS.length).padStart(2, '0')} Records
             </span>
@@ -462,7 +462,7 @@ export const VideoVaultPage: React.FC<{ onNavigate: (m: AppModule) => void }> = 
           </p>
 
           {/* Neural line */}
-          <div className="w-20 h-0.5 mx-auto mt-6 bg-gradient-to-r from-[#39FF88] to-[#8B5CFF] rounded-full shadow-[0_0_12px_rgba(57,255,136,.4)]" />
+          <div className="w-20 h-0.5 mx-auto mt-6 bg-gradient-to-r from-[#39FF88] to-[#8B5CFF] shadow-[0_0_12px_rgba(57,255,136,.4)]" />
 
           {/* Subtitle */}
           <p className="mt-5 text-[15px] font-light text-white/38 max-w-[500px] mx-auto leading-[1.7] tracking-[.03em]">
@@ -508,7 +508,7 @@ export const VideoVaultPage: React.FC<{ onNavigate: (m: AppModule) => void }> = 
                 onClick={() => { setActiveCat(tab.key); setPlayingId(null); }}
                 onMouseEnter={expandRing}
                 onMouseLeave={shrinkRing}
-                className={`font-['Orbitron',monospace] text-[9px] font-bold tracking-[.18em] uppercase px-6 py-2.5 rounded-full border backdrop-blur-sm transition-all duration-250 ${
+                className={`font-['Orbitron',monospace] text-[9px] font-bold tracking-[.18em] uppercase px-6 py-2.5 border backdrop-blur-sm transition-all duration-250 ${
                   activeCat === tab.key
                     ? 'bg-gradient-to-br from-[#39FF88] to-[#8B5CFF] border-transparent text-black'
                     : 'border-white/10 bg-[#1a2333]/50 text-white/38 hover:text-white hover:border-[#39FF88]/25'

@@ -108,7 +108,7 @@ export const MotionLab: React.FC = () => {
   if (hasAccess === false) {
     return (
       <div className="h-full flex flex-col items-center justify-center p-12 text-center space-y-8 bg-black/40 backdrop-blur-3xl">
-        <div className="p-6 rounded-full bg-gray-900 border border-gray-800 shadow-2xl">
+        <div className="p-6 bg-gray-900 border border-gray-800 shadow-2xl">
           <Lock className="w-10 h-10 text-gray-500" />
         </div>
         <div className="space-y-4">
@@ -134,7 +134,7 @@ export const MotionLab: React.FC = () => {
               <Box className="w-5 h-5 text-emerald-500" /> Motion Lab v2.0
             </h2>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <div className="w-2 h-2 bg-emerald-500 animate-pulse" />
               <span className="text-[9px] text-gray-600 uppercase tracking-[0.3em] font-mono">System Integrity Valid</span>
             </div>
           </div>
@@ -212,8 +212,8 @@ export const MotionLab: React.FC = () => {
         {isGenerating && (
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm flex flex-col items-center justify-center z-20 space-y-12">
             <div className="relative">
-              <div className="w-24 h-24 rounded-full border border-emerald-500/20 animate-ping absolute inset-0" />
-              <div className="w-24 h-24 rounded-full border border-emerald-500/40 animate-pulse relative flex items-center justify-center">
+              <div className="w-24 h-24 border border-emerald-500/20 animate-ping absolute inset-0" />
+              <div className="w-24 h-24 border border-emerald-500/40 animate-pulse relative flex items-center justify-center">
                 <Zap className="w-8 h-8 text-emerald-500" />
               </div>
             </div>
