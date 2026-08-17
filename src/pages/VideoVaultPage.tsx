@@ -38,10 +38,10 @@ const CATEGORY_META: Record<VaultCategory, { label: string; tagClass: string; bg
 };
 
 const TABS: { key: string; label: string; count: number }[] = [
-  { key: 'all', label: 'All', count: 13 },
+  { key: 'all', label: 'All', count: 15 },
   { key: 's', label: 'Transmissions', count: 3 },
   { key: 'd', label: 'Deployments', count: 3 },
-  { key: 'b', label: 'Briefings', count: 7 },
+  { key: 'b', label: 'Briefings', count: 9 },
 ];
 
 // ──────────────────────────────────────────────────────────────
@@ -65,6 +65,8 @@ const VIDEOS: VaultVideo[] = [
   { id: 'ext-002', ref: 'EXT-002', title: 'JB³Ai — Extended Briefing II', description: 'Continuation briefing on governed AI integration, operational architecture, and real-world deployment impact.', category: 'b', source: 'youtube', url: 'https://youtu.be/-A-Jecn_snw', duration: '10:00' },
   { id: 'ext-003', ref: 'EXT-003', title: 'JB³Ai — Extended Briefing III', description: 'Strategic overview of JB³Ai intelligence operations and platform evolution across enterprise verticals.', category: 'b', source: 'youtube', url: 'https://youtu.be/ZhoKerlOmsM', duration: '10:00' },
   { id: 'ext-004', ref: 'EXT-004', title: 'JB³Ai — Extended Briefing IV', description: 'Advanced briefing on next-generation AI deployment frameworks and enterprise integration pathways.', category: 'b', source: 'youtube', url: 'https://youtu.be/OB4EOujdvws', duration: '10:00' },
+  { id: 'ext-005', ref: 'EXT-005', title: 'Isikolo AI — Extended Briefing', description: 'Extended briefing on accessible educational intelligence and zero-cost AI deployment across South African classrooms.', category: 'b', source: 'youtube', url: 'https://youtu.be/IQnM2uDoVQ0', duration: '10:00' },
+  { id: 'ext-006', ref: 'EXT-006', title: 'OS³ Voice Grid — Extended Briefing', description: 'Deep-dive briefing on multilingual voice workflows, high-volume call automation, and qualification pipelines.', category: 'b', source: 'youtube', url: 'https://youtu.be/f1uMKVptX7k', duration: '10:00' },
 ];
 
 /* ─────────────────── CURSOR EFFECTS HOOK ─────────────────── */
