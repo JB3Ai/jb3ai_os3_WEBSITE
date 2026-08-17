@@ -77,12 +77,12 @@ export const EcosystemImpact: React.FC = () => {
 
   return (
     <section id="sponsorship" className="relative overflow-hidden border-t border-slate-800/80 bg-[#0D0F12] py-24 text-slate-100">
-      <div className="pointer-events-none absolute left-1/2 top-1/3 h-[500px] w-[900px] -translate-x-1/2 bg-amber-950/15 blur-[160px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/3 h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-amber-950/15 blur-[160px]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-16 max-w-3xl text-center">
-          <div className="mb-4 inline-flex items-center gap-2 border border-amber-500/30 bg-amber-950/60 px-3.5 py-1 text-xs font-mono uppercase tracking-wider text-amber-400">
-            <span className="h-2 w-2 animate-pulse bg-amber-400" />
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-950/60 px-3.5 py-1 text-xs font-mono uppercase tracking-wider text-amber-400">
+            <span className="h-2 w-2 animate-pulse rounded-full bg-amber-400" />
             CSR & Ecosystem Sustainability
           </div>
 
@@ -94,16 +94,16 @@ export const EcosystemImpact: React.FC = () => {
             JB³Ai believes in leveraging institutional-grade technology for societal scale. Support the infrastructure that keeps critical tools like <span className="font-semibold text-amber-300">Isikolo AI</span> free for learners across South Africa.
           </p>
 
-          <div className="mt-6 inline-flex items-center border border-slate-800 bg-slate-900 p-1 text-xs font-mono">
+          <div className="mt-6 inline-flex items-center rounded-lg border border-slate-800 bg-slate-900 p-1 text-xs font-mono">
             <button
               onClick={() => setCurrency('ZAR')}
-              className={`px-3 py-1.5 transition-all ${currency === 'ZAR' ? 'bg-amber-500 font-bold text-slate-950 shadow-sm' : 'text-slate-400 hover:text-white'}`}
+              className={`rounded-md px-3 py-1.5 transition-all ${currency === 'ZAR' ? 'bg-amber-500 font-bold text-slate-950 shadow-sm' : 'text-slate-400 hover:text-white'}`}
             >
               ZAR (South Africa)
             </button>
             <button
               onClick={() => setCurrency('USD')}
-              className={`px-3 py-1.5 transition-all ${currency === 'USD' ? 'bg-amber-500 font-bold text-slate-950 shadow-sm' : 'text-slate-400 hover:text-white'}`}
+              className={`rounded-md px-3 py-1.5 transition-all ${currency === 'USD' ? 'bg-amber-500 font-bold text-slate-950 shadow-sm' : 'text-slate-400 hover:text-white'}`}
             >
               USD (Global)
             </button>
@@ -114,12 +114,12 @@ export const EcosystemImpact: React.FC = () => {
           {TIERS.map((tier) => (
             <div
               key={tier.id}
-              className={`relative flex flex-col justify-between border bg-slate-900/70 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 ${tier.isManuscript ? 'border-cyan-500/40 hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(6,182,212,0.15)]' : 'border-slate-800 hover:border-amber-500/50 hover:shadow-[0_0_25px_rgba(245,158,11,0.12)]'}`}
+              className={`relative flex flex-col justify-between rounded-xl border bg-slate-900/70 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 ${tier.isManuscript ? 'border-cyan-500/40 hover:border-cyan-400 hover:shadow-[0_0_25px_rgba(6,182,212,0.15)]' : 'border-slate-800 hover:border-amber-500/50 hover:shadow-[0_0_25px_rgba(245,158,11,0.12)]'}`}
             >
               <div>
                 {tier.badge && (
                   <div className="mb-3">
-                    <span className={`border px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider ${tier.isManuscript ? 'border-cyan-800 bg-cyan-950/80 text-cyan-300' : 'border-amber-800 bg-amber-950/80 text-amber-300'}`}>
+                    <span className={`rounded border px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider ${tier.isManuscript ? 'border-cyan-800 bg-cyan-950/80 text-cyan-300' : 'border-amber-800 bg-amber-950/80 text-amber-300'}`}>
                       {tier.badge}
                     </span>
                   </div>
@@ -137,7 +137,7 @@ export const EcosystemImpact: React.FC = () => {
 
               <button
                 onClick={() => handleOpenModal(tier)}
-                className={`w-full border px-4 py-2.5 text-xs font-medium uppercase tracking-wider transition-all duration-200 ${tier.isManuscript ? 'border-cyan-500/40 bg-cyan-500/10 text-cyan-300 hover:border-cyan-400 hover:bg-cyan-500 hover:text-slate-950' : 'border-amber-500/40 bg-amber-500/10 text-amber-300 hover:border-amber-400 hover:bg-amber-500 hover:text-slate-950'}`}
+                className={`w-full rounded-lg border px-4 py-2.5 text-xs font-medium uppercase tracking-wider transition-all duration-200 ${tier.isManuscript ? 'border-cyan-500/40 bg-cyan-500/10 text-cyan-300 hover:border-cyan-400 hover:bg-cyan-500 hover:text-slate-950' : 'border-amber-500/40 bg-amber-500/10 text-amber-300 hover:border-amber-400 hover:bg-amber-500 hover:text-slate-950'}`}
               >
                 {tier.buttonText}
               </button>
@@ -148,10 +148,10 @@ export const EcosystemImpact: React.FC = () => {
 
       {selectedTier && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md">
-          <div className="relative w-full max-w-md border border-slate-800 bg-slate-900 p-6 shadow-2xl">
+          <div className="relative w-full max-w-md rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-2xl">
             <button
               onClick={handleCloseModal}
-              className="absolute right-4 top-4 bg-slate-800 p-1 text-xs font-mono text-slate-400 hover:text-white"
+              className="absolute right-4 top-4 rounded-md bg-slate-800 p-1 text-xs font-mono text-slate-400 hover:text-white"
             >
               ✕ ESC
             </button>
@@ -174,7 +174,7 @@ export const EcosystemImpact: React.FC = () => {
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => setPaymentGateway('payfast')}
-                  className={`border p-3 text-left text-xs font-semibold transition-all ${paymentGateway === 'payfast' ? 'border-amber-500 bg-amber-500/15 text-amber-300' : 'border-slate-700 bg-slate-800/60 text-slate-300 hover:bg-slate-800'}`}
+                  className={`rounded-lg border p-3 text-left text-xs font-semibold transition-all ${paymentGateway === 'payfast' ? 'border-amber-500 bg-amber-500/15 text-amber-300' : 'border-slate-700 bg-slate-800/60 text-slate-300 hover:bg-slate-800'}`}
                 >
                   💳 PayFast (ZAR)
                   <span className="mt-0.5 block text-[10px] font-normal text-slate-400">Card / EFT / Instant</span>
@@ -182,7 +182,7 @@ export const EcosystemImpact: React.FC = () => {
 
                 <button
                   onClick={() => setPaymentGateway('stripe')}
-                  className={`border p-3 text-left text-xs font-semibold transition-all ${paymentGateway === 'stripe' ? 'border-amber-500 bg-amber-500/15 text-amber-300' : 'border-slate-700 bg-slate-800/60 text-slate-300 hover:bg-slate-800'}`}
+                  className={`rounded-lg border p-3 text-left text-xs font-semibold transition-all ${paymentGateway === 'stripe' ? 'border-amber-500 bg-amber-500/15 text-amber-300' : 'border-slate-700 bg-slate-800/60 text-slate-300 hover:bg-slate-800'}`}
                 >
                   🌐 Stripe (USD)
                   <span className="mt-0.5 block text-[10px] font-normal text-slate-400">Global Cards</span>
@@ -190,7 +190,7 @@ export const EcosystemImpact: React.FC = () => {
 
                 <button
                   onClick={() => setPaymentGateway('paypal')}
-                  className={`border p-3 text-left text-xs font-semibold transition-all ${paymentGateway === 'paypal' ? 'border-amber-500 bg-amber-500/15 text-amber-300' : 'border-slate-700 bg-slate-800/60 text-slate-300 hover:bg-slate-800'}`}
+                  className={`rounded-lg border p-3 text-left text-xs font-semibold transition-all ${paymentGateway === 'paypal' ? 'border-amber-500 bg-amber-500/15 text-amber-300' : 'border-slate-700 bg-slate-800/60 text-slate-300 hover:bg-slate-800'}`}
                 >
                   🅿️ PayPal
                   <span className="mt-0.5 block text-[10px] font-normal text-slate-400">International</span>
@@ -198,7 +198,7 @@ export const EcosystemImpact: React.FC = () => {
 
                 <button
                   onClick={() => setPaymentGateway('crypto')}
-                  className={`border p-3 text-left text-xs font-semibold transition-all ${paymentGateway === 'crypto' ? 'border-amber-500 bg-amber-500/15 text-amber-300' : 'border-slate-700 bg-slate-800/60 text-slate-300 hover:bg-slate-800'}`}
+                  className={`rounded-lg border p-3 text-left text-xs font-semibold transition-all ${paymentGateway === 'crypto' ? 'border-amber-500 bg-amber-500/15 text-amber-300' : 'border-slate-700 bg-slate-800/60 text-slate-300 hover:bg-slate-800'}`}
                 >
                   ⚡ Web3 / Crypto
                   <span className="mt-0.5 block text-[10px] font-normal text-slate-400">USDT / BTC / ETH</span>
@@ -209,7 +209,7 @@ export const EcosystemImpact: React.FC = () => {
             <div className="space-y-2">
               <button
                 onClick={executePayment}
-                className="w-full bg-amber-500 px-4 py-3 text-sm font-bold uppercase tracking-wider text-slate-950 transition-colors hover:bg-amber-400"
+                className="w-full rounded-xl bg-amber-500 px-4 py-3 text-sm font-bold uppercase tracking-wider text-slate-950 transition-colors hover:bg-amber-400"
               >
                 Proceed to Checkout ({paymentGateway.toUpperCase()})
               </button>

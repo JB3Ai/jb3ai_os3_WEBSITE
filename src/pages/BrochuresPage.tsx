@@ -180,7 +180,7 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
             <div className="fixed top-0 left-0 right-0 z-50 px-6 py-6 transition-all duration-300">
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
                     <button onClick={() => onNavigate('home')} className="group flex items-center gap-3 text-xs font-bold tracking-[0.2em] text-[#9AA3AD] hover:text-white transition-colors uppercase">
-                        <div className="w-8 h-8 bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#66FF66] group-hover:bg-[#66FF66] transition-all duration-300">
+                        <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#66FF66] group-hover:bg-[#66FF66] transition-all duration-300">
                             <ArrowLeft className="w-3 h-3 text-[#9AA3AD] group-hover:text-black transition-colors" />
                         </div>
                         <span className="group-hover:translate-x-1 transition-transform duration-300">Back to OS³</span>
@@ -192,34 +192,34 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
                 <h1 className="font-orbitron font-bold tracking-tight text-4xl md:text-6xl lg:text-7xl text-white mb-4">
                     DOWNLOAD JB³Ai BROCHURES
                 </h1>
-                <p className="inline-block mt-4 px-4 py-2 bg-white/95 text-black text-xs tracking-[0.2em] uppercase shadow-sm">Enterprise Intelligence Documentation</p>
+                <p className="inline-block mt-4 px-4 py-2 bg-white/95 text-black text-xs tracking-[0.2em] uppercase rounded-md shadow-sm">Enterprise Intelligence Documentation</p>
             </div>
 
             <section className="relative z-10 -mt-10 px-6 pb-10">
                 <div className="max-w-6xl mx-auto">
-                    <div className="mx-auto w-full glass p-5 md:p-6 border border-white/5 bg-black/70 backdrop-blur-xl relative overflow-hidden group hover:border-[#66FF66]/30 transition-all duration-700 shadow-xl shadow-black/30">
+                    <div className="mx-auto w-full glass rounded-xl p-5 md:p-6 border border-white/5 bg-black/70 backdrop-blur-xl relative overflow-hidden group hover:border-[#66FF66]/30 transition-all duration-700 shadow-xl shadow-black/30">
                         <div className="flex flex-col md:flex-row justify-between items-end mb-4 pb-4 border-b border-white/5 relative z-10 gap-4 flex-wrap">
                             <div>
                                 <h3 className="text-lg md:text-xl font-display font-light text-white mb-2">Real-time <span className="font-bold text-white">Background Tuning</span></h3>
                                 <p className="text-[#9AA3AD] text-[10px] tracking-wide max-w-sm">Interact with the sliders below to modify the neural grid simulation in real-time.</p>
                             </div>
                             <div className="flex flex-wrap gap-2">
-                                <button onClick={() => applyPreset('cyber')} className="px-3 py-1.5 bg-white/5 hover:bg-[#66FF66]/20 border border-white/10 hover:border-[#66FF66]/50 text-[9px] uppercase tracking-widest transition-all duration-300">Cyber</button>
-                                <button onClick={() => applyPreset('deep')} className="px-3 py-1.5 bg-white/5 hover:bg-[#66FF66]/20 border border-white/10 hover:border-[#66FF66]/50 text-[9px] uppercase tracking-widest transition-all duration-300">Deep</button>
-                                <button onClick={() => applyPreset('matrix')} className="px-3 py-1.5 bg-white/5 hover:bg-[#66FF66]/20 border border-white/10 hover:border-[#66FF66]/50 text-[9px] uppercase tracking-widest transition-all duration-300">Matrix</button>
-                                <button onClick={randomizeConfig} className="px-3 py-1.5 bg-[#66FF66] text-black hover:bg-white hover:scale-105 border-0 text-[9px] font-black uppercase tracking-widest shadow-[0_0_15px_rgba(102,255,102,0.3)] transition-all duration-300">Randomize</button>
+                                <button onClick={() => applyPreset('cyber')} className="px-3 py-1.5 rounded-full bg-white/5 hover:bg-[#66FF66]/20 border border-white/10 hover:border-[#66FF66]/50 text-[9px] uppercase tracking-widest transition-all duration-300">Cyber</button>
+                                <button onClick={() => applyPreset('deep')} className="px-3 py-1.5 rounded-full bg-white/5 hover:bg-[#66FF66]/20 border border-white/10 hover:border-[#66FF66]/50 text-[9px] uppercase tracking-widest transition-all duration-300">Deep</button>
+                                <button onClick={() => applyPreset('matrix')} className="px-3 py-1.5 rounded-full bg-white/5 hover:bg-[#66FF66]/20 border border-white/10 hover:border-[#66FF66]/50 text-[9px] uppercase tracking-widest transition-all duration-300">Matrix</button>
+                                <button onClick={randomizeConfig} className="px-3 py-1.5 rounded-full bg-[#66FF66] text-black hover:bg-white hover:scale-105 border-0 text-[9px] font-black uppercase tracking-widest shadow-[0_0_15px_rgba(102,255,102,0.3)] transition-all duration-300">Randomize</button>
                             </div>
                         </div>
 
                         {/* Controls Grid */}
                         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 opacity-80 hover:opacity-100 transition-opacity">
-                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">HUE</label><input type="range" min="0" max="360" value={bgConfig.hue} onChange={(e) => updateConfig('hue', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 cursor-pointer" /></div>
-                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">SATURATION</label><input type="range" min="0" max="100" value={bgConfig.saturation} onChange={(e) => updateConfig('saturation', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 cursor-pointer" /></div>
-                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">DENSITY</label><input type="range" min="0.1" max="2.0" step="0.1" value={bgConfig.density} onChange={(e) => updateConfig('density', parseFloat(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 cursor-pointer" /></div>
-                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">STROKE</label><input type="range" min="1" max="10" value={bgConfig.maxStroke} onChange={(e) => updateConfig('maxStroke', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 cursor-pointer" /></div>
-                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">FORCE</label><input type="range" min="5" max="50" value={bgConfig.forceStrength} onChange={(e) => updateConfig('forceStrength', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 cursor-pointer" /></div>
-                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">RADIUS</label><input type="range" min="50" max="1200" value={bgConfig.magnifierRadius} onChange={(e) => updateConfig('magnifierRadius', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 cursor-pointer" /></div>
-                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">GRID</label><input type="range" min="4" max="30" step="1" value={bgConfig.spacing} onChange={(e) => updateConfig('spacing', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 cursor-pointer" style={{ direction: 'rtl' }} /></div>
+                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">HUE</label><input type="range" min="0" max="360" value={bgConfig.hue} onChange={(e) => updateConfig('hue', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 rounded-full cursor-pointer" /></div>
+                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">SATURATION</label><input type="range" min="0" max="100" value={bgConfig.saturation} onChange={(e) => updateConfig('saturation', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 rounded-full cursor-pointer" /></div>
+                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">DENSITY</label><input type="range" min="0.1" max="2.0" step="0.1" value={bgConfig.density} onChange={(e) => updateConfig('density', parseFloat(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 rounded-full cursor-pointer" /></div>
+                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">STROKE</label><input type="range" min="1" max="10" value={bgConfig.maxStroke} onChange={(e) => updateConfig('maxStroke', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 rounded-full cursor-pointer" /></div>
+                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">FORCE</label><input type="range" min="5" max="50" value={bgConfig.forceStrength} onChange={(e) => updateConfig('forceStrength', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 rounded-full cursor-pointer" /></div>
+                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">RADIUS</label><input type="range" min="50" max="1200" value={bgConfig.magnifierRadius} onChange={(e) => updateConfig('magnifierRadius', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 rounded-full cursor-pointer" /></div>
+                            <div className="space-y-2 text-left"><label className="text-[9px] tracking-widest text-[#9AA3AD] block font-bold">GRID</label><input type="range" min="4" max="30" step="1" value={bgConfig.spacing} onChange={(e) => updateConfig('spacing', parseInt(e.target.value))} className="w-full accent-[#66FF66] h-1 bg-white/10 rounded-full cursor-pointer" style={{ direction: 'rtl' }} /></div>
                         </div>
                     </div>
                 </div>
@@ -232,7 +232,7 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
                         {BROCHURES.map((brochure, idx) => (
                             <div
                                 key={brochure.id}
-                                className="glass h-full group hover:shadow-2xl hover:shadow-[#66FF66]/10 transition-all duration-700 hover:border-[#66FF66]/40 relative overflow-hidden"
+                                className="glass rounded-3xl h-full group hover:shadow-2xl hover:shadow-[#66FF66]/10 transition-all duration-700 hover:border-[#66FF66]/40 relative overflow-hidden"
                                 style={{ transitionDelay: `${idx * 100}ms` }}
                             >
                                 {/* Background Image with Gradient Overlay */}
@@ -274,14 +274,14 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
                                             href={brochure.pdfUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex-1 py-2 flex items-center justify-center gap-1.5 bg-white/5 hover:bg-white/10 text-[8px] font-black uppercase tracking-[0.2em] transition-all duration-300 border border-white/5 text-[#9AA3AD] hover:text-white"
+                                            className="flex-1 py-2 flex items-center justify-center gap-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-[8px] font-black uppercase tracking-[0.2em] transition-all duration-300 border border-white/5 text-[#9AA3AD] hover:text-white"
                                         >
                                             <Eye className="w-3.5 h-3.5" /> Preview
                                         </a>
                                         <a
                                             href={brochure.pdfUrl}
                                             download
-                                            className="flex-1 py-2 flex items-center justify-center gap-1.5 bg-[#66FF66] hover:brightness-110 text-black text-[8px] font-black uppercase tracking-[0.2em] transition-all duration-300 shadow-xl shadow-[#66FF66]/10 hover:shadow-[#66FF66]/30 hover:-translate-y-1"
+                                            className="flex-1 py-2 flex items-center justify-center gap-1.5 rounded-lg bg-[#66FF66] hover:brightness-110 text-black text-[8px] font-black uppercase tracking-[0.2em] transition-all duration-300 shadow-xl shadow-[#66FF66]/10 hover:shadow-[#66FF66]/30 hover:-translate-y-1"
                                         >
                                             <Download className="w-3.5 h-3.5" /> Download
                                         </a>

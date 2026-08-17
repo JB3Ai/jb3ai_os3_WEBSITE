@@ -29,7 +29,7 @@ export const AppsListPage: React.FC<AppsListPageProps> = ({ onNavigate }) => {
                 <ModuleGrid onNavigate={onNavigate} />
 
                 <section className="pt-20 space-y-20">
-                    <FadeIn className="border border-slate-800 bg-slate-900/80 p-16 space-y-8">
+                    <FadeIn className="rounded-3xl border border-slate-800 bg-slate-900/80 p-16 space-y-8">
                         <h3 className="text-white font-bold uppercase tracking-widest text-sm">Module Framework Expansion</h3>
                         <p className="text-xs text-slate-400 leading-relaxed uppercase tracking-widest max-w-3xl">
                             Additional modules for financial forensics, creative asset orchestration, and supply-chain intelligence are currently in briefing. Custom module development is available via the Accelerator Program.

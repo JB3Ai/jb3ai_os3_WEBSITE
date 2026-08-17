@@ -19,7 +19,7 @@ export const DemoWorkspacePage: React.FC<DemoWorkspacePageProps> = ({ onNavigate
             <DashboardBackdrop />
 
             <div className="text-center space-y-12 relative z-10 max-w-4xl mx-auto">
-                <FadeIn className="inline-flex items-center justify-center gap-4 text-[9px] text-emerald-500 font-mono uppercase tracking-[0.4em] bg-emerald-500/5 py-2 px-8 border border-emerald-500/20 mb-4">
+                <FadeIn className="inline-flex items-center justify-center gap-4 text-[9px] text-emerald-500 font-mono uppercase tracking-[0.4em] bg-emerald-500/5 py-2 px-8 border border-emerald-500/20 rounded-full mb-4">
                     <ShieldCheck className="w-4 h-4" /> System Integrity Validated
                 </FadeIn>
                 <div className="space-y-8">

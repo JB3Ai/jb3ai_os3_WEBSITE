@@ -202,7 +202,7 @@ export const OS3ModuleGrid: React.FC = () => {
               
               {/* Card Header: Tag */}
               <div className="mb-5 flex items-start justify-between">
-                <span className="inline-block px-2.5 py-1 rounded bg-slate-800/50 text-[10px] font-mono uppercase tracking-wider text-slate-400 border border-slate-700/50">
+                <span className="inline-block px-2.5 py-1 bg-slate-800/50 text-[10px] font-mono uppercase tracking-wider text-slate-400 border border-slate-700/50">
                   {module.tag}
                 </span>
               </div>
@@ -221,7 +221,9 @@ export const OS3ModuleGrid: React.FC = () => {
               <div className="mt-8 pt-5 border-t border-slate-800/80 flex flex-col gap-4">
                 {/* Demo Link */}
                 <a
-                  href={module.demoPath}
+                  href="https://jonoblackburn.com/os"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xs font-medium text-white hover:text-slate-300 transition-colors"
                 >
                   Access Module Sandbox

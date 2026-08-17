@@ -13,7 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
   ...props 
 }) => {
-  const baseStyle = "font-tech uppercase tracking-wider px-6 py-2 transition-all duration-200 flex items-center justify-center gap-2 text-sm font-bold relative overflow-hidden group";
+  const baseStyle = "font-tech uppercase tracking-wider px-6 py-2 rounded-sm transition-all duration-200 flex items-center justify-center gap-2 text-sm font-bold relative overflow-hidden group";
   
   const variants = {
     primary: "bg-cyan-500/10 text-cyan-400 border border-cyan-500/50 hover:bg-cyan-500/20 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:border-cyan-400",

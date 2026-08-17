@@ -19,7 +19,7 @@ export function VisualBreak({
         </div>
       ) : null}
 
-      <div className="relative w-full aspect-video overflow-hidden">
+      <div className="relative w-full aspect-video overflow-hidden rounded-2xl">
         {/* Fallback image loads instantly */}
         <img
           src={imageSrc}

@@ -63,7 +63,7 @@ export const PolicyPage: React.FC<PolicyPageProps> = ({ module }) => {
             <div className="max-w-4xl mx-auto space-y-16">
                 <FadeIn>
                     <div className="space-y-6">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-400">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold uppercase tracking-[0.2em] text-cyan-400">
                             <Icon className="w-3 h-3" />
                             <span>Statement of Practice</span>
                         </div>

@@ -124,14 +124,16 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({
               >
                 Book Expert Advisor
               </motion.button>
-              <motion.button
+              <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => navigate(AppModule.WORKSPACE)}
+                href="https://jonoblackburn.com/os"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary bg-white text-black px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-gray-200 transition-colors"
               >
                 View OS³ Demo
-              </motion.button>
+              </motion.a>
             </div>
             <button className="lg:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

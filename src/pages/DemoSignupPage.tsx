@@ -101,7 +101,7 @@ export const DemoSignupPage: React.FC<DemoSignupPageProps> = ({ destination, onB
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 xl:grid-cols-[minmax(0,1.1fr)_420px] gap-8 relative z-10">
         <section className="border border-gray-900 bg-black/40 p-8 md:p-12 space-y-12">
-          <FadeIn className="inline-flex items-center gap-3 text-[9px] text-cyan-400 font-mono uppercase tracking-[0.35em] bg-cyan-500/5 py-2 px-6 border border-cyan-500/20">
+          <FadeIn className="inline-flex items-center gap-3 text-[9px] text-cyan-400 font-mono uppercase tracking-[0.35em] bg-cyan-500/5 py-2 px-6 border border-cyan-500/20 rounded-full">
             <ShieldCheck className="w-4 h-4" /> Access Request Flow
           </FadeIn>
 

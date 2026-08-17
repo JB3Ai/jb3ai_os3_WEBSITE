@@ -102,7 +102,7 @@ export const DemoPortalPage: React.FC<DemoPortalPageProps> = ({ onNavigate }) =>
   return (
     <div className="min-h-[calc(100vh-6rem)] bg-slate-950 px-4 py-6 lg:px-8 text-slate-100">
       <div className="mx-auto flex max-w-7xl flex-col gap-6">
-        <div className="flex flex-col gap-4 border border-slate-800 bg-slate-900/95 p-6 shadow-[0_0_60px_rgba(0,0,0,0.35)] md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-4 rounded-[2rem] border border-slate-800 bg-slate-900/95 p-6 shadow-[0_0_60px_rgba(0,0,0,0.35)] md:flex-row md:items-center md:justify-between">
           <div className="space-y-2">
             <p className="text-[10px] uppercase tracking-[0.35em] text-slate-400">System Status</p>
             <h1 className="text-2xl font-bold tracking-tight text-white md:text-4xl">OS³ Demo Environment Online</h1>
@@ -112,7 +112,7 @@ export const DemoPortalPage: React.FC<DemoPortalPageProps> = ({ onNavigate }) =>
           </div>
           <button
             onClick={() => onNavigate(AppModule.HOME)}
-            className="inline-flex items-center gap-2 border border-slate-700 bg-slate-900/80 px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.25em] text-slate-100 transition hover:border-slate-500 hover:bg-slate-800"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/80 px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.25em] text-slate-100 transition hover:border-slate-500 hover:bg-slate-800"
           >
             <ArrowLeft className="h-4 w-4" />
             Return to JB³Ai
@@ -120,7 +120,7 @@ export const DemoPortalPage: React.FC<DemoPortalPageProps> = ({ onNavigate }) =>
         </div>
 
         <div className="grid gap-6 xl:grid-cols-[1.5fr_1fr]">
-          <div className="border border-slate-800 bg-slate-900/95 p-6 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
+          <div className="rounded-[2rem] border border-slate-800 bg-slate-900/95 p-6 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
             <div className="mb-8 flex items-center justify-between gap-4">
               <div>
                 <p className="text-[10px] uppercase tracking-[0.35em] text-slate-400">Application Grid</p>
@@ -129,7 +129,7 @@ export const DemoPortalPage: React.FC<DemoPortalPageProps> = ({ onNavigate }) =>
               </div>
               <button
                 onClick={() => openFullDemo()}
-                className="border border-slate-700 bg-slate-950 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-slate-100 transition hover:border-slate-500 hover:bg-slate-800"
+                className="rounded-full border border-slate-700 bg-slate-950 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-slate-100 transition hover:border-slate-500 hover:bg-slate-800"
               >
                 Open full demo
               </button>
@@ -137,12 +137,12 @@ export const DemoPortalPage: React.FC<DemoPortalPageProps> = ({ onNavigate }) =>
             <ModuleGrid onSelect={(id) => setActiveApp(id as DemoAppId)} selectedId={activeApp} />
           </div>
 
-          <aside className="border border-slate-800 bg-slate-900/95 p-6 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
+          <aside className="rounded-[2rem] border border-slate-800 bg-slate-900/95 p-6 shadow-[0_0_40px_rgba(0,0,0,0.25)]">
             <p className="text-[10px] uppercase tracking-[0.35em] text-slate-400">Selected Module</p>
             <h2 className="mt-3 text-2xl font-semibold text-white">{activeModule?.title ?? activeDefinition.title}</h2>
             <p className="mt-4 text-sm leading-7 text-slate-400">{activeModule?.description ?? activeDefinition.description}</p>
             <div className="mt-6 space-y-4">
-              <div className="border border-slate-800 bg-slate-950 p-4">
+              <div className="rounded-2xl border border-slate-800 bg-slate-950 p-4">
                 <p className="text-[10px] uppercase tracking-[0.35em] text-slate-500">Tag</p>
                 <p className="mt-2 text-sm font-semibold text-slate-100">{activeModule?.tag ?? activeDefinition.subtitle}</p>
               </div>
@@ -151,7 +151,7 @@ export const DemoPortalPage: React.FC<DemoPortalPageProps> = ({ onNavigate }) =>
                   const pdfUrl = activeModule?.pdfUrl ?? '#';
                   window.open(pdfUrl, '_blank', 'noopener,noreferrer');
                 }}
-                className="w-full border border-slate-700 bg-slate-950 px-4 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-slate-100 transition hover:border-slate-500 hover:bg-slate-800"
+                className="w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-slate-100 transition hover:border-slate-500 hover:bg-slate-800"
               >
                 View cutsheet
               </button>

@@ -7,7 +7,7 @@ import { CtaBlock } from '../components/ui/CtaBlock';
 import { Divider } from '../components/ui/Divider';
 import { SectionVisual } from '../components/sections/SectionVisual';
 import { FadeIn } from '../components/ui/FadeIn';
-import { ApplicationGrid } from '../components/ApplicationGrid';
+import { ModuleGrid } from '../components/ModuleGrid';
 import { BrochureButton } from '../components/BrochureButton';
 import { EcosystemImpact } from '../components/EcosystemImpact';
 
@@ -101,7 +101,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
 
                 <div className="hero-fg hero-content relative z-10 pointer-events-auto">
                     <FadeIn className="space-y-12">
-                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900/50 border border-slate-800 text-xs font-bold text-slate-300 uppercase tracking-[0.3em] mb-4">
+                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900/50 border border-slate-800 rounded-full text-xs font-bold text-slate-300 uppercase tracking-[0.3em] mb-4">
                             <Zap className="w-4 h-4 text-amber-300" /> OS³ Stable v2.0
                         </div>
                         <motion.h1
@@ -132,14 +132,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                             >
                                 Explore OS³ Suite
                             </motion.button>
-                            <motion.button
+                            <motion.a
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => onNavigate(AppModule.DEMO_PORTAL)}
+                                href="https://jonoblackburn.com/os"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="border border-slate-700 text-slate-100 px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-slate-800 transition-all"
                             >
                                 Access Live Demo
-                            </motion.button>
+                            </motion.a>
                         </div>
                     </FadeIn>
                 </div>
@@ -308,7 +310,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                         </FadeIn>
                     </div>
 
-                    <ApplicationGrid />
+                        <ModuleGrid onNavigate={onNavigate} />
 
                             <EcosystemImpact />
                 </div>
@@ -512,7 +514,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 <motion.div
                     animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.1, 1] }}
                     transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-400/5 blur-[120px] pointer-events-none"
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-400/5 blur-[120px] rounded-full pointer-events-none"
                 />
             </section>
         </div>

@@ -80,7 +80,7 @@ export const MediaLab: React.FC = () => {
   if (hasAccess === false) {
     return (
       <div className="h-full flex flex-col items-center justify-center p-8 text-center space-y-6">
-        <div className="p-4 bg-gray-800">
+        <div className="p-4 rounded-full bg-gray-800">
           <Lock className="w-8 h-8 text-gray-400" />
         </div>
         <h2 className="text-xl font-light text-white">Restricted Area</h2>

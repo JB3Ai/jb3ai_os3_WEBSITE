@@ -54,7 +54,7 @@ export const CorporateFooter: React.FC = () => {
               href={doc.path}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col justify-between p-5 bg-[#11151E]/60 border border-slate-800/80 hover:border-slate-600 hover:bg-[#151A24] transition-all group"
+              className="flex flex-col justify-between p-5 bg-[#11151E]/60 border border-slate-800/80 rounded-lg hover:border-slate-600 hover:bg-[#151A24] transition-all group"
             >
               <div>
                 <span className="text-[10px] font-mono uppercase tracking-wider text-slate-500 block mb-2">
@@ -87,7 +87,7 @@ export const CorporateFooter: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-6 font-mono text-[11px]">
-          <a href="/demo" className="hover:text-slate-300 transition-colors">OS³ DEMO</a>
+          <a href="https://jonoblackburn.com/os" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">OS³ DEMO</a>
           <a href="#sponsorship" className="hover:text-slate-300 transition-colors">CSR SPONSORSHIP</a>
           <a href="https://github.com/JB3Ai/jb3ai_os3_WEBSITE" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">GITHUB REPO</a>
         </div>

@@ -64,7 +64,7 @@ export function PaymentModal({ isOpen, tier, onClose }: PaymentModalProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-      <div className="w-full max-w-3xl border border-white/10 bg-[#090909] p-8 shadow-[0_0_60px_rgba(0,0,0,0.45)]">
+      <div className="w-full max-w-3xl rounded-[2rem] border border-white/10 bg-[#090909] p-8 shadow-[0_0_60px_rgba(0,0,0,0.45)]">
         <div className="flex items-start justify-between gap-4 pb-6 border-b border-white/10">
           <div>
             <p className="text-[10px] uppercase tracking-[0.35em] text-cyan-400">Sponsorship Checkout</p>
@@ -77,12 +77,12 @@ export function PaymentModal({ isOpen, tier, onClose }: PaymentModalProps) {
         </div>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="border border-cyan-500/10 bg-white/5 p-5">
+          <div className="rounded-3xl border border-cyan-500/10 bg-white/5 p-5">
             <p className="text-[10px] uppercase tracking-[0.35em] text-gray-400">Cost</p>
             <p className="mt-3 text-3xl font-bold text-white">{tier.costZAR}</p>
             <p className="text-sm text-gray-400">{tier.costUSD} USD</p>
           </div>
-          <div className="border border-white/10 bg-white/5 p-5">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
             <p className="text-[10px] uppercase tracking-[0.35em] text-gray-400">Select Payment Method</p>
             <div className="mt-4 space-y-3">
               {(['PayFast', 'Stripe', 'PayPalDonate', 'PayPalPayLater', 'Crypto'] as PaymentMethod[]).map((option) => (
@@ -90,7 +90,7 @@ export function PaymentModal({ isOpen, tier, onClose }: PaymentModalProps) {
                   key={option}
                   type="button"
                   onClick={() => setMethod(option)}
-                  className={`w-full border px-4 py-3 text-left text-sm transition ${method === option ? 'border-cyan-400 bg-cyan-500/10 text-white' : 'border-white/10 bg-white/5 text-gray-300 hover:bg-white/10'}`}
+                  className={`w-full rounded-2xl border px-4 py-3 text-left text-sm transition ${method === option ? 'border-cyan-400 bg-cyan-500/10 text-white' : 'border-white/10 bg-white/5 text-gray-300 hover:bg-white/10'}`}
                 >
                   <span className="flex items-center gap-3">
                     {option === 'PayFast' && <ShieldCheck className="w-4 h-4" />}
@@ -103,13 +103,13 @@ export function PaymentModal({ isOpen, tier, onClose }: PaymentModalProps) {
               ))}
             </div>
           </div>
-          <div className="border border-white/10 bg-white/5 p-5">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
             <p className="text-[10px] uppercase tracking-[0.35em] text-gray-400">Payment Details</p>
             <div className="mt-4 space-y-3 text-sm text-gray-300">
               {method === 'Crypto' ? (
                 <>
                   <p className="font-semibold text-white">Wallet Address</p>
-                  <div className="border border-white/10 bg-[#0c0c0c] p-4 text-xs font-mono text-green-300 break-all">
+                  <div className="rounded-2xl border border-white/10 bg-[#0c0c0c] p-4 text-xs font-mono text-green-300 break-all">
                     {CRYPTO_ADDRESS}
                   </div>
                   <Button variant="secondary" type="button" onClick={handleCopyAddress} className="w-full">

@@ -6,7 +6,7 @@ export const ApplicationGrid: React.FC = () => {
     <section id="applications" className="py-20 bg-slate-950 text-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-14 text-center max-w-3xl mx-auto">
-          <div className="mb-4 inline-flex border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
+          <div className="mb-4 inline-flex rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">
             OS³ Intelligence Architecture
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">

@@ -254,7 +254,7 @@ export const NeuralCore: React.FC = () => {
             </div>
 
             {/* Visualization */}
-            <div className="flex-1 bg-black/50 border border-gray-800 relative flex items-center justify-center overflow-hidden">
+            <div className="flex-1 bg-black/50 border border-gray-800 rounded-sm relative flex items-center justify-center overflow-hidden">
                 <canvas ref={canvasRef} width={800} height={300} className="w-full h-full opacity-80" />
 
                 {!isConnected && (
@@ -273,7 +273,7 @@ export const NeuralCore: React.FC = () => {
                     <button
                         onClick={toggleMute}
                         disabled={!isConnected}
-                        className={`p-3 border transition-all ${isMuted ? 'bg-red-900/20 border-red-800 text-red-400' : 'bg-gray-900 border-gray-700 text-white hover:border-gray-500'}`}
+                        className={`p-3 rounded-full border transition-all ${isMuted ? 'bg-red-900/20 border-red-800 text-red-400' : 'bg-gray-900 border-gray-700 text-white hover:border-gray-500'}`}
                     >
                         {isMuted ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
                     </button>
