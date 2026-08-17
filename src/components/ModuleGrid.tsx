@@ -36,14 +36,14 @@ export const MODULES: ModuleItem[] = [
     tag: 'Forensic Analysis',
     description: 'Forensic Data & Sequence Mapping. Export complex communications into fully transcribed, forensic-level timelines.',
     demoPath: '/demo?app=investigator',
-    pdfUrl: '/assets/pdfs/OS³ INVESTIGATOR_CUTSHEET_WEB.pdf',
+    pdfUrl: '/assets/pdfs/OS3-INVESTIGATOR_CUTSHEET_WEB.pdf',
     primaryPdf: {
       label: 'Cutsheet',
-      path: '/assets/pdfs/OS³ INVESTIGATOR_CUTSHEET_WEB.pdf',
+      path: '/assets/pdfs/OS3-INVESTIGATOR_CUTSHEET_WEB.pdf',
     },
     secondaryPdf: {
       label: 'Brochure',
-      path: '/assets/pdfs/JB3InvestigatorAi VER1 Dash.pdf',
+      path: '/assets/pdfs/JB3InvestigatorAi-VER1-Dash.pdf',
     },
   },
   {
@@ -53,14 +53,10 @@ export const MODULES: ModuleItem[] = [
     tag: 'AI Workforce',
     description: 'Automated AI Workforce. Deploy a multilingual AI workforce optimized for operations, research, and legal workflows.',
     demoPath: '/demo?app=superagents',
-    pdfUrl: '/assets/pdfs/JB³ OS³ Dash The Operating SystemF1.pdf',
+    pdfUrl: '/assets/pdfs/JB3-OS3-Dash-The-Operating-SystemF1.pdf',
     primaryPdf: {
       label: 'Cutsheet',
-      path: '/assets/pdfs/JB³ OS³ Dash The Operating SystemF1.pdf',
-    },
-    secondaryPdf: {
-      label: 'Brochure',
-      path: '/assets/pdfs/JB3Ai_Super_Agent_Operating_System_V5.pdf',
+      path: '/assets/pdfs/JB3-OS3-Dash-The-Operating-SystemF1.pdf',
     },
   },
   {
@@ -70,10 +66,10 @@ export const MODULES: ModuleItem[] = [
     tag: 'Encrypted Comms',
     description: 'Secure Containerized Communications. Container-to-container protocol with 256-bit encryption for chat and document sharing.',
     demoPath: '/demo?app=clipboard',
-    pdfUrl: '/assets/pdfs/OS³ CLIPBOARDAI.pdf',
+    pdfUrl: '/assets/pdfs/OS3-CLIPBOARDAI.pdf',
     primaryPdf: {
       label: 'Cutsheet',
-      path: '/assets/pdfs/OS³ CLIPBOARDAI.pdf',
+      path: '/assets/pdfs/OS3-CLIPBOARDAI.pdf',
     },
   },
   {
@@ -83,14 +79,14 @@ export const MODULES: ModuleItem[] = [
     tag: 'Multilingual Voice',
     description: 'High-Volume Voice Operations. Supports 8 South African languages and 50+ international languages with pay-per-second billing.',
     demoPath: '/demo?app=voicegrid',
-    pdfUrl: '/assets/pdfs/OS³ VOICEGRID CUTSHEET.pdf',
+    pdfUrl: '/assets/pdfs/OS3-VOICEGRID-CUTSHEET.pdf',
     primaryPdf: {
       label: 'Cutsheet',
-      path: '/assets/pdfs/OS³ VOICEGRID CUTSHEET.pdf',
+      path: '/assets/pdfs/OS3-VOICEGRID-CUTSHEET.pdf',
     },
     secondaryPdf: {
       label: 'Brochure',
-      path: '/assets/pdfs/Sovereign VOICEGRID V2 Infrastructure ManualF1.pdf',
+      path: '/assets/pdfs/Sovereign-VOICEGRID-V2-Infrastructure-ManualF1.pdf',
     },
   },
   {
@@ -100,10 +96,10 @@ export const MODULES: ModuleItem[] = [
     tag: 'Aerial Intelligence',
     description: 'Global Satellite Overlay & Surveillance System. Digital satellite monitoring for logistical and security oversight.',
     demoPath: '/demo?app=viewgrid',
-    pdfUrl: '/assets/pdfs/Global Satellite Overlay The Sentinel EyeF1.pdf',
+    pdfUrl: '/assets/pdfs/Global-Satellite-Overlay-The-Sentinel-EyeF1.pdf',
     primaryPdf: {
       label: 'Brochure',
-      path: '/assets/pdfs/Global Satellite Overlay The Sentinel EyeF1.pdf',
+      path: '/assets/pdfs/Global-Satellite-Overlay-The-Sentinel-EyeF1.pdf',
     },
   },
   {
@@ -113,18 +109,18 @@ export const MODULES: ModuleItem[] = [
     tag: 'Educational CSR',
     description: 'Accessible Educational Intelligence. Zero-cost AI platform preloaded with South African school curriculum.',
     demoPath: '/demo?app=isikolo',
-    pdfUrl: '/assets/pdfs/OS³ ISIKOLOAI CUTSHEET.pdf',
+    pdfUrl: '/assets/pdfs/OS3-ISIKOLOAI-CUTSHEET.pdf',
     primaryPdf: {
       label: 'Cutsheet',
-      path: '/assets/pdfs/OS³ ISIKOLOAI CUTSHEET.pdf',
+      path: '/assets/pdfs/OS3-ISIKOLOAI-CUTSHEET.pdf',
     },
     secondaryPdf: {
       label: 'Brochure',
-      path: '/assets/pdfs/IsikoloAi for learnersF1.pdf',
+      path: '/assets/pdfs/IsikoloAi-for-learnersF1.pdf',
     },
     tertiaryPdf: {
       label: 'Story Book',
-      path: '/assets/pdfs/The Bridge of Voices_ The Story of Isikolo AI.pdf',
+      path: '/assets/pdfs/The-Bridge-of-Voices_-The-Story-of-Isikolo-AI.pdf',
     },
     videoLink: {
       label: 'Watch Video',
@@ -138,27 +134,27 @@ export const MODULES: ModuleItem[] = [
     tag: 'Content Intelligence',
     description: 'Automated Media & Content Intelligence. Real-time newsroom curation, automated indexing, and editorial synthesis.',
     demoPath: '/demo?app=newsroom',
-    pdfUrl: '/assets/pdfs/OS³ NEWSROOMAI CUTSHEET.pdf',
+    pdfUrl: '/assets/pdfs/OS3-NEWSROOMAI-CUTSHEET.pdf',
     primaryPdf: {
       label: 'Cutsheet',
-      path: '/assets/pdfs/OS³ NEWSROOMAI CUTSHEET.pdf',
+      path: '/assets/pdfs/OS3-NEWSROOMAI-CUTSHEET.pdf',
     },
   },
   {
     id: 'os3-core',
     demoId: 'core',
-    title: 'OS³ Core System',
+    title: 'OS3 Core System',
     tag: 'Managed Operating System',
     description: 'Institutional AI Operating System. Containerized infrastructure handling enterprise AI workloads with full data sovereignty.',
     demoPath: '/demo?app=core',
-    pdfUrl: '/assets/pdfs/CHECK OS³ Core Platform BriefingsF1OPEN.pdf',
+    pdfUrl: '/assets/pdfs/CHECK-OS3-Core-Platform-BriefingsF1OPEN.pdf',
     primaryPdf: {
       label: 'Cutsheet',
-      path: '/assets/pdfs/CHECK OS³ Core Platform BriefingsF1OPEN.pdf',
+      path: '/assets/pdfs/CHECK-OS3-Core-Platform-BriefingsF1OPEN.pdf',
     },
     secondaryPdf: {
       label: 'Brochure',
-      path: '/assets/pdfs/JB³ OS³ Dash The Operating SystemF1.pdf',
+      path: '/assets/pdfs/JB3-OS3-Dash-The-Operating-SystemF1.pdf',
     },
   },
   {
@@ -168,10 +164,10 @@ export const MODULES: ModuleItem[] = [
     tag: 'Quantitative Motion',
     description: 'Data Motion & Accelerator Platform. Quantitative intelligence modeling for institutional asset oversight.',
     demoPath: '/demo?app=investment',
-    pdfUrl: '/assets/pdfs/JBInvestment Intelligence in MotionV2_F1.pdf',
+    pdfUrl: '/assets/pdfs/JBInvestment-Intelligence-in-MotionV2_F!.pdf',
     primaryPdf: {
       label: 'Brochure',
-      path: '/assets/pdfs/JBInvestment Intelligence in MotionV2_F1.pdf',
+      path: '/assets/pdfs/JBInvestment-Intelligence-in-MotionV2_F!.pdf',
     }
   }
 ];
@@ -184,7 +180,7 @@ export const OS3ModuleGrid: React.FC = () => {
         {/* Corporate Header Section */}
         <div className="mb-16">
           <h2 className="text-sm font-mono text-slate-500 uppercase tracking-widest mb-2">
-            OS³ Intelligence Architecture
+            OS3 Intelligence Architecture
           </h2>
           <h3 className="text-3xl font-semibold text-white tracking-tight">
             Integrated Applications Suite

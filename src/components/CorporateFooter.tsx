@@ -23,14 +23,14 @@ const CORPORATE_DOCS: CorporateDoc[] = [
   {
     title: 'Dukebox London Console',
     category: 'Hardware Spec',
-    description: 'Hardware specification and cutsheet for the OS³ London Dukebox console.',
-    path: '/assets/pdfs/OS³ DUKEBOX LONDON CUTSHEET.pdf',
+    description: 'Hardware specification and cutsheet for the OS3 London Dukebox console.',
+    path: '/assets/pdfs/OS3-DUKEBOX-LONDON-CUTSHEET.pdf',
   },
   {
     title: 'Isikolo AI CSR Advert',
     category: 'CSR & Sponsorship',
     description: 'Sponsorship briefing and community impact overview for Isikolo AI.',
-    path: '/assets/pdfs/AD_ISIKOLOAI - ADVERT SPONCERSHIP F1.pdf',
+    path: '/assets/pdfs/AD_ISIKOLOAI---ADVERT-SPONCERSHIP-F1.pdf',
   },
 ];
 
@@ -81,19 +81,19 @@ export const CorporateFooter: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500">
         <div className="flex items-center gap-3">
-          <span className="font-bold text-white tracking-wider">JB³Ai</span>
+          <span className="font-bold text-white tracking-wider">JB3Ai</span>
           <span>—</span>
-          <span>OS³ Managed AI Operating System</span>
+          <span>OS3 Managed AI Operating System</span>
         </div>
 
         <div className="flex items-center gap-6 font-mono text-[11px]">
-          <a href="https://jonoblackburn.com/os" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">OS³ DEMO</a>
+          <a href="https://jonoblackburn.com/os" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">OS3 DEMO</a>
           <a href="#sponsorship" className="hover:text-slate-300 transition-colors">CSR SPONSORSHIP</a>
           <a href="https://github.com/JB3Ai/jb3ai_os3_WEBSITE" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">GITHUB REPO</a>
         </div>
 
         <p className="text-[11px]">
-          © {new Date().getFullYear()} JB³Ai. All rights reserved.
+          © {new Date().getFullYear()} JB3Ai. All rights reserved.
         </p>
       </div>
     </footer>
