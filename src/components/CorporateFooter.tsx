@@ -9,12 +9,6 @@ interface CorporateDoc {
 
 const CORPORATE_DOCS: CorporateDoc[] = [
   {
-    title: 'Executive Profile & Resume',
-    category: 'Leadership',
-    description: 'Jonathan Blackburn premium executive resume and background overview.',
-    path: '/assets/pdfs/Jonathan_Blackburn_Premium_Resume.pdf',
-  },
-  {
     title: '2026 Intelligence Catalogue',
     category: 'Corporate Reports',
     description: 'Comprehensive catalogue of business intelligence and research deliverables.',
