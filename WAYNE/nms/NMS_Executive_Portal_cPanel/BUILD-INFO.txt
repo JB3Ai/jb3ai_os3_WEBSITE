@@ -1,0 +1,26 @@
+NMS Executive Portal — cPanel Build
+Build date: 2026-08-18
+Runtime: Node.js 20 or newer + MySQL
+Startup file: index.js
+Health endpoint: /healthz
+
+Included:
+- Production portal frontend
+- Standalone PIN-protected Node.js/tRPC server
+- Seven edited client PDF originals
+- One edited budget/ROI XLSX original
+- Three video thumbnails and two proposal images
+- MySQL blank-database installer
+- cPanel setup and environment instructions
+
+Verification completed:
+- TypeScript check passed
+- 10 automated tests passed
+- Production frontend build passed
+- PIN login smoke test passed
+- Protected vault API smoke test passed
+- Unauthenticated PDF access returned 401
+- Authenticated PDF returned application/pdf
+- Production dependency audit: 0 vulnerabilities
+
+The production PIN, JWT secret, database credentials, and platform credentials are not included.

@@ -37,3 +37,5 @@ pwsh ./deploy.ps1
 - The FTP helper is not the normal production path.
 - Remote upload paths in the legacy script may need review before use.
 - Prefer cPanel’s git-based deployment whenever possible.
+- FTP can publish the main site's built `dist/` output and the static `/isidore` route.
+- Do not use FTP to publish the secure NMS portal as a static `/nms` folder. Upload `WAYNE/nms/NMS_Executive_Portal_cPanel/` through cPanel's Node.js application workflow so its PIN gate, API, database, and protected documents remain active.

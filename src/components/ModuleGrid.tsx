@@ -58,6 +58,10 @@ export const MODULES: ModuleItem[] = [
       label: 'Cutsheet',
       path: '/assets/pdfs/JB3-OS3-Dash-The-Operating-SystemF1.pdf',
     },
+    secondaryPdf: {
+      label: 'Brochure',
+      path: '/assets/pdfs/JB3-OS3-Dash-The-Operating-SystemF1.pdf',
+    },
   },
   {
     id: 'clipboard-ai',
@@ -87,6 +91,10 @@ export const MODULES: ModuleItem[] = [
     secondaryPdf: {
       label: 'Brochure',
       path: '/assets/pdfs/Sovereign-VOICEGRID-V2-Infrastructure-ManualF1.pdf',
+    },
+    tertiaryPdf: {
+      label: 'Infrastructure Manual',
+      path: '/assets/pdfs/OS³ VER1 Voice Grid_F1.pdf',
     },
   },
   {

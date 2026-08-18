@@ -16,14 +16,14 @@ interface Brochure {
     imageUrl?: string;
 }
 
-// Brochures metadata matched to public/brochures/pdfs/ directory
+// Brochures metadata matched to public/assets/pdfs/ directory
 const BROCHURES: Brochure[] = [
     {
         id: 'os3-dash',
         title: 'OS³ Dash',
         category: 'Enterprise Operations',
         description: 'The modular AI operating system designed for enterprise-scale integration and real-time operational efficiency.',
-        pdfUrl: '/documents/pdfs/jb3ai-dash-the-operating-system.pdf',
+        pdfUrl: '/assets/pdfs/JB³ OS³ Dash The Operating SystemF1.pdf',
         fileSize: '23.8 MB',
         imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
     },
@@ -32,7 +32,7 @@ const BROCHURES: Brochure[] = [
         title: 'InvestigatorAi',
         category: 'Legal & Compliance',
         description: 'Advanced forensic intelligence platform for deep-dive investigations and automated evidence synthesis.',
-        pdfUrl: '/documents/pdfs/jb3ai-investigatorai-app-dash-v1.pdf',
+        pdfUrl: '/assets/pdfs/FINAL V2 JB³Ai Forensic Intelligence Systems Overview F1.pdf',
         fileSize: '9.3 MB',
         imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
     },
@@ -41,7 +41,7 @@ const BROCHURES: Brochure[] = [
         title: 'ShieldAi',
         category: 'Cybersecurity Teams',
         description: 'Silent, proactive protection layering that neutralizes threats before they reach your core infrastructure.',
-        pdfUrl: '/documents/pdfs/jb3ai-shieldai-silent-protection.pdf',
+        pdfUrl: '/assets/pdfs/Dual-Layer Intelligencetar×JBF1.pdf',
         fileSize: '21.5 MB',
         imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=format&fit=crop"
     },
@@ -50,7 +50,7 @@ const BROCHURES: Brochure[] = [
         title: 'OS³ Voice Grid',
         category: 'Communications',
         description: 'Intelligent, ultra-low latency voice architecture seamlessly integrating natural language processing at the edge.',
-        pdfUrl: '/documents/pdfs/jb3ai-os3-voice-grid.pdf',
+        pdfUrl: '/assets/pdfs/OS³ VOICEGRID CUTSHEET.pdf',
         fileSize: '22.3 MB',
         imageUrl: "https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2076&auto=format&fit=crop"
     },
@@ -59,7 +59,7 @@ const BROCHURES: Brochure[] = [
         title: 'MindCareAi',
         category: 'Healthcare & Wellness',
         description: 'A sophisticated personal growth framework powered by adaptive neural networks for emotional intelligence.',
-        pdfUrl: '/documents/pdfs/jb3ai-mindcareai-personal-support-and-growth.pdf',
+        pdfUrl: '/assets/pdfs/OS³ ISIKOLOAI CUTSHEET.pdf',
         fileSize: '22.7 MB',
         imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop"
     },
@@ -68,7 +68,7 @@ const BROCHURES: Brochure[] = [
         title: 'Intelligence Managed',
         category: 'Managed Services',
         description: 'Discover how our fully managed intelligence services seamlessly adapt to power your most critical business operations.',
-        pdfUrl: '/documents/pdfs/jb3ai-intelligence-managed.pdf',
+        pdfUrl: '/assets/pdfs/OS³ Core Platform Briefings WEB F1.pdf',
         fileSize: '7.8 MB',
         imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
     },
@@ -77,7 +77,7 @@ const BROCHURES: Brochure[] = [
         title: 'Consulting & Accelerator',
         category: 'Innovation Leaders',
         description: 'Accelerating AI transformation through strategic roadmaps and high-impact deployment frameworks.',
-        pdfUrl: '/documents/pdfs/jb3ai-consulting-and-accelerator.pdf',
+        pdfUrl: '/assets/pdfs/JB3_Consulting & Accelerator_F1.pdf',
         fileSize: '12.3 MB',
         imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
     },
@@ -86,7 +86,7 @@ const BROCHURES: Brochure[] = [
         title: 'Executive Deck',
         category: 'Strategic Partners',
         description: 'A comprehensive high-level overview of the OS³ platform capabilities for executive leadership and strategic planning.',
-        pdfUrl: '/documents/pdfs/jb3ai-executive-deck-os.pdf',
+        pdfUrl: '/assets/pdfs/JB3_Business_Intelligence_Reports_Catalogue_2026_v2_F1.pdf',
         fileSize: '7.6 MB',
         imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
     },
@@ -95,7 +95,7 @@ const BROCHURES: Brochure[] = [
         title: 'Investment Deck',
         category: 'Qualified Investors',
         description: "A comprehensive overview of JB³Ai's trajectory, valuation, and market-disrupting technology stack.",
-        pdfUrl: '/documents/pdfs/jb3ai-investment-deck-intelligence-in-motion.pdf',
+        pdfUrl: '/assets/pdfs/JBInvestment Intelligence in MotionV2_F!.pdf',
         fileSize: '27.2 MB',
         imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
     },
@@ -104,7 +104,7 @@ const BROCHURES: Brochure[] = [
         title: 'Intelligence in Motion',
         category: 'Strategic Partners',
         description: 'A strategic profile exploring the convergence of kinetic motion and artificial intelligence.',
-        pdfUrl: '/documents/pdfs/jb3ai-intelligence-info-ai.pdf',
+        pdfUrl: '/assets/pdfs/Global Satellite Overlay The Sentinel EyeF1.pdf',
         fileSize: '13.1 MB',
         imageUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop"
     }

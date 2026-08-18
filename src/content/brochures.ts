@@ -1,11 +1,11 @@
 export const BROCHURES = {
-    os3dash: "/documents/pdfs/jb3ai-dash-the-operating-system.pdf",
-    mindcare: "/documents/pdfs/jb3ai-mindcareai-personal-support-and-growth.pdf",
-    shield: "/documents/pdfs/jb3ai-shieldai-silent-protection.pdf",
-    investigator: "/documents/pdfs/jb3ai-investigatorai-app-dash-v1.pdf",
-    consulting: "/documents/pdfs/jb3ai-consulting-and-accelerator.pdf",
-    investment: "/documents/pdfs/jb3ai-investment-deck-intelligence-in-motion.pdf",
-    voicegrid: "/documents/pdfs/jb3ai-os3-voice-grid.pdf",
+    os3dash: "/assets/pdfs/JB³ OS³ Dash The Operating SystemF1.pdf",
+    mindcare: "/assets/pdfs/OS³ ISIKOLOAI CUTSHEET.pdf",
+    shield: "/assets/pdfs/Dual-Layer Intelligencetar×JBF1.pdf",
+    investigator: "/assets/pdfs/FINAL V2 JB³Ai Forensic Intelligence Systems Overview F1.pdf",
+    consulting: "/assets/pdfs/JB3_Consulting & Accelerator_F1.pdf",
+    investment: "/assets/pdfs/JBInvestment Intelligence in MotionV2_F!.pdf",
+    voicegrid: "/assets/pdfs/OS³ VOICEGRID CUTSHEET.pdf",
 } as const;
 
 export type BrochureKey = keyof typeof BROCHURES;

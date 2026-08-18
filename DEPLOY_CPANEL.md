@@ -2,6 +2,11 @@
 
 This project deploys to cPanel from Git, not by FTP as the primary release path.
 
+This guide covers the main Vite website. The secure NMS portal is a separate
+Node.js application and must be deployed from
+`WAYNE/nms/NMS_Executive_Portal_cPanel/`; see that package's
+`CPANEL-SETUP.md` for its database, environment, and startup configuration.
+
 ## Canonical Release Flow
 
 1. Commit changes locally.
@@ -26,7 +31,8 @@ This project deploys to cPanel from Git, not by FTP as the primary release path.
 - The local FTP files in this repository are legacy fallback tooling only.
 - The `.github/workflows/deploy-cpanel.yml` file may still exist, but it is not the source of truth for the live cPanel deployment workflow.
 - cPanel must publish the built `dist/` output for this Vite app, not the raw source tree.
-- The repo root [index.html](/c:/Apps in Dev Visual Code Folder/jb3ai-os3/index.html) is the development entry and loads `/src/main.tsx`; the live site should use the built [dist/index.html](/c:/Apps in Dev Visual Code Folder/jb3ai-os3/dist/index.html) plus hashed assets from `dist/assets/`.
+- The repo root `index.html` is the development entry and loads `/src/main.tsx`; the live site should use the built `dist/index.html` plus hashed assets from `dist/assets/`.
+- The built `dist/isidore` and `dist/nms` directories are static route assets. They do not provide the secure NMS Node.js API or PIN protection.
 - If cPanel is only pulling Git without running the build/publish step, the latest push will not appear on the live site even though GitHub is up to date.
 
 ## If cPanel Does Not Auto-Update
