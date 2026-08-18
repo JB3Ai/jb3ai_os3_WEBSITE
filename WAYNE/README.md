@@ -6,7 +6,7 @@ as standalone pages:
 - `https://www.jb3ai.com/isidore` is deployed from `public/isidore`.
 - `https://www.jb3ai.com/nms` is deployed from `public/nms`.
 
-## Source and deployment artifacts
+## Source and deployment artifiiiiiiimkiacts
 
 - `isidore/` contains the Isidore static export and its source assets.
 - `nms/` contains the NMS portal source project.
