@@ -27,6 +27,21 @@ jobs:
       - name: Build main app
         run: npm run build
 
+      - name: Verify FTP-safe dist paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          invalid=0
+          while IFS= read -r -d '' file; do
+            if printf '%s' "$file" | LC_ALL=C grep -q '[^ -~]'; then
+              echo "Non-ASCII deployment path: ${file#./}"
+              invalid=1
+            fi
+          done < <(find dist -print0)
+          if [ "$invalid" -ne 0 ]; then
+            exit 1
+          fi
+
       - name: Deploy main dist to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
