@@ -41,7 +41,7 @@ const BROCHURES: Brochure[] = [
         title: 'ShieldAi',
         category: 'Cybersecurity Teams',
         description: 'Silent, proactive protection layering that neutralizes threats before they reach your core infrastructure.',
-        pdfUrl: '/assets/pdfs/Dual-Layer Intelligencetar×JBF1.pdf',
+        pdfUrl: '/assets/pdfs/Dual-Layer-Intelligencetar-JBF1.pdf',
         fileSize: '21.5 MB',
         imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=format&fit=crop"
     },
