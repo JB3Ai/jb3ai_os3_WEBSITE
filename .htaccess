@@ -13,6 +13,16 @@
   RewriteRule ^wayne/isidore/(.*)$ /isidore/$1 [R=301,L,NC]
   RewriteRule ^wayne/nms/(.*)$ /nms/$1 [R=301,L,NC]
 
+  # Fallback for deployments serving repository root (no built dist/ published)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/public/isidore -d
+  RewriteRule ^isidore(?:/(.*))?$ /public/isidore/$1 [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/public/nms -d
+  RewriteRule ^nms(?:/(.*))?$ /public/nms/$1 [L]
+
   # Force SPA handling for demo routes even if legacy demo/ folders exist in the web root
   RewriteRule ^demo(/.*)?$ /index.html [L]
 
