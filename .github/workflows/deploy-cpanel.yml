@@ -51,6 +51,7 @@ jobs:
           protocol: ftps
           port: 21
           security: loose
+          state-name: .ftp-deploy-sync-state-v2.json
           local-dir: ./dist/
           server-dir: public_html/
           timeout: 600000
