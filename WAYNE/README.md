@@ -4,7 +4,6 @@ These projects are maintained inside the JB3Ai website repository and are served
 as standalone pages:
 
 - `https://www.jb3ai.com/isidore` is deployed from `public/isidore`.
-- `https://www.jb3ai.com/nms` is deployed from `public/nms`.
 
 ## Source and deployment artifiiiiiiimkiacts
 
@@ -13,17 +12,15 @@ as standalone pages:
 - `nms/NMS_Executive_Portal_cPanel/` contains the updated production cPanel
   package, including the Node server, database installer, protected document
   vault, and current frontend assets.
-- The legacy NMS client build is generated at `nms/dist/public/` and may be
-  used only as a static preview in `public/nms/`.
 - The current secure production build is the complete
   `nms/NMS_Executive_Portal_cPanel/` package; deploy that package as a cPanel
-  Node.js app instead of flattening it into `public/nms/`.
+  Node.js app instead of flattening it into a static public folder.
 
 Do not copy `node_modules`, `nms/dist`, or other local build output into the
 repository. The nested project ignore rules keep those directories out of Git.
 
-The root `.htaccess` excludes both URL prefixes from the main React SPA
-rewrite, allowing Apache to serve each page's static assets directly.
+The root `.htaccess` keeps the Isidore route outside the main React SPA rewrite
+and blocks `/nms` and `/wayne/nms` on the static website host.
 
 ## NMS cPanel deployment
 

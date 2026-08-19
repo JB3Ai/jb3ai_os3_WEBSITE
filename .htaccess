@@ -5,21 +5,25 @@
   # Allow direct access to index.html
   RewriteRule ^index\.html$ - [L]
 
-  # Canonical lowercase Wayne URLs -> actual folder case under public_html/Wayne/
-  RewriteRule ^wayne/nms$ /Wayne/nms/ [R=301,L,NC]
-  RewriteRule ^wayne/isidore$ /Wayne/isidore/ [R=301,L,NC]
-  RewriteRule ^wayne/nms/(.*)$ /Wayne/nms/$1 [R=301,L,NC]
-  RewriteRule ^wayne/isidore/(.*)$ /Wayne/isidore/$1 [R=301,L,NC]
+  # NMS must run as a separate Node.js app; disable static website routing
+  RewriteRule ^nms(?:/.*)?$ - [G,L,NC]
+  RewriteRule ^wayne/nms(?:/.*)?$ - [G,L,NC]
 
-  # Never send Wayne demo paths to SPA
-  RewriteRule ^Wayne/(nms|isidore)(/.*)?$ - [L,NC]
-  RewriteRule ^wayne/(nms|isidore)(/.*)?$ - [L,NC]
+  # Canonical route aliases for static Wayne project exports
+  RewriteRule ^isidore$ /isidore/ [R=301,L,NC]
+  RewriteRule ^wayne/isidore$ /isidore/ [R=301,L,NC]
+  RewriteRule ^wayne/isidore/(.*)$ /isidore/$1 [R=301,L,NC]
+
+  # Fallback for deployments serving repository root (no built dist/ published)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^isidore(?:/(.*))?$ /public/isidore/$1 [L]
 
   # Force SPA handling for demo routes even if legacy demo/ folders exist in the web root
   RewriteRule ^demo(/.*)?$ /index.html [L]
 
   # Exclude static directories and files from SPA rewriting
-  RewriteRule ^(brochures|public|clipboard|kids-goexplore|os3grid|dadchef|Wayne|wayne|isidore|nms)(/.*)?$ - [L]
+  RewriteRule ^(brochures|public|clipboard|kids-goexplore|os3grid|dadchef|Wayne|wayne|isidore)(/.*)?$ - [L]
   RewriteRule \.(pdf|png|jpg|jpeg|gif|css|js|svg|woff|woff2|ttf|eot)$ - [L]
 
   # Rewrite remaining requests to index.html for SPA routing
