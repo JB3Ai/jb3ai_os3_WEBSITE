@@ -5,15 +5,13 @@
   # Allow direct access to index.html
   RewriteRule ^index\.html$ - [L]
 
-  # Canonical lowercase Wayne URLs -> actual folder case under public_html/Wayne/
-  RewriteRule ^wayne/nms$ /Wayne/nms/ [R=301,L,NC]
-  RewriteRule ^wayne/isidore$ /Wayne/isidore/ [R=301,L,NC]
-  RewriteRule ^wayne/nms/(.*)$ /Wayne/nms/$1 [R=301,L,NC]
-  RewriteRule ^wayne/isidore/(.*)$ /Wayne/isidore/$1 [R=301,L,NC]
-
-  # Never send Wayne demo paths to SPA
-  RewriteRule ^Wayne/(nms|isidore)(/.*)?$ - [L,NC]
-  RewriteRule ^wayne/(nms|isidore)(/.*)?$ - [L,NC]
+  # Canonical route aliases for static Wayne project exports
+  RewriteRule ^isidore$ /isidore/ [R=301,L,NC]
+  RewriteRule ^nms$ /nms/ [R=301,L,NC]
+  RewriteRule ^wayne/isidore$ /isidore/ [R=301,L,NC]
+  RewriteRule ^wayne/nms$ /nms/ [R=301,L,NC]
+  RewriteRule ^wayne/isidore/(.*)$ /isidore/$1 [R=301,L,NC]
+  RewriteRule ^wayne/nms/(.*)$ /nms/$1 [R=301,L,NC]
 
   # Force SPA handling for demo routes even if legacy demo/ folders exist in the web root
   RewriteRule ^demo(/.*)?$ /index.html [L]
