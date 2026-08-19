@@ -17,7 +17,6 @@
   # Fallback for deployments serving repository root (no built dist/ published)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{DOCUMENT_ROOT}/public/isidore -d
   RewriteRule ^isidore(?:/(.*))?$ /public/isidore/$1 [L]
 
   # Force SPA handling for demo routes even if legacy demo/ folders exist in the web root
