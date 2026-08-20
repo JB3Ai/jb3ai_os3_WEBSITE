@@ -9,10 +9,11 @@
   RewriteRule ^nms(?:/.*)?$ - [G,L,NC]
   RewriteRule ^wayne/nms(?:/.*)?$ - [G,L,NC]
 
-  # Canonical route aliases for static Wayne project exports
+  # Canonical route alias for static Wayne project exports
   RewriteRule ^isidore$ /isidore/ [R=301,L,NC]
-  RewriteRule ^wayne/isidore$ /isidore/ [R=301,L,NC]
-  RewriteRule ^wayne/isidore/(.*)$ /isidore/$1 [R=301,L,NC]
+
+  # /wayne/isidore/ is a separate standalone app with its own .htaccess; do not rewrite it here.
+  RewriteRule ^wayne/isidore(?:/.*)?$ - [L]
 
   # Fallback for deployments serving repository root (no built dist/ published)
   RewriteCond %{REQUEST_FILENAME} !-f

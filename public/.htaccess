@@ -11,11 +11,12 @@
   RewriteRule ^brochures/.+ /index.html [L]
 
   RewriteRule ^isidore$ /isidore/ [R=301,L,NC]
-  RewriteRule ^wayne/isidore$ /isidore/ [R=301,L,NC]
-  RewriteRule ^wayne/isidore/(.*)$ /isidore/$1 [R=301,L,NC]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^isidore(?:/.*)?$ /isidore/index.html [L,NC]
+
+  # /wayne/isidore/ is a separate standalone app with its own .htaccess; do not rewrite it here.
+  RewriteRule ^wayne/isidore(?:/.*)?$ - [L]
 
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
