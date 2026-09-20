@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { AppModule } from '../types';
 import { ModuleGrid, MODULES as DEMO_MODULES } from '../components/ModuleGrid';
+import { BROCHURES, isDocumentAvailable } from '../content/brochures';
 
 interface DemoPortalPageProps {
   onNavigate: (m: AppModule) => void;
@@ -74,7 +75,6 @@ const isDemoApp = (value: string | null): value is DemoAppId => {
 };
 
 export const DemoPortalPage: React.FC<DemoPortalPageProps> = ({ onNavigate }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
   const [activeApp, setActiveApp] = useState<DemoAppId>(() => {
     if (typeof window === 'undefined') {
       return 'investigator';
@@ -98,6 +98,7 @@ export const DemoPortalPage: React.FC<DemoPortalPageProps> = ({ onNavigate }) =>
   };
 
   const activeModule = DEMO_MODULES.find((module) => module.demoId === activeApp);
+  const activeDocument = activeModule?.primaryPdf ? BROCHURES[activeModule.primaryPdf.documentId] : undefined;
 
   return (
     <div className="min-h-[calc(100vh-6rem)] bg-slate-950 px-4 py-6 lg:px-8 text-slate-100">
@@ -146,15 +147,20 @@ export const DemoPortalPage: React.FC<DemoPortalPageProps> = ({ onNavigate }) =>
                 <p className="text-[10px] uppercase tracking-[0.35em] text-slate-500">Tag</p>
                 <p className="mt-2 text-sm font-semibold text-slate-100">{activeModule?.tag ?? activeDefinition.subtitle}</p>
               </div>
-              <button
-                onClick={() => {
-                  const pdfUrl = activeModule?.pdfUrl ?? '#';
-                  window.open(pdfUrl, '_blank', 'noopener,noreferrer');
-                }}
-                className="w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-sm font-semibold uppercase tracking-[0.25em] text-slate-100 transition hover:border-slate-500 hover:bg-slate-800"
-              >
-                View cutsheet
-              </button>
+              {isDocumentAvailable(activeDocument) ? (
+                <a
+                  href={activeDocument.pdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full rounded-full border border-slate-700 bg-slate-950 px-4 py-3 text-center text-sm font-semibold uppercase tracking-[0.25em] text-slate-100 transition hover:border-slate-500 hover:bg-slate-800"
+                >
+                  View cutsheet
+                </a>
+              ) : (
+                <div className="w-full rounded-full border border-slate-800 bg-slate-950 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-slate-600" role="status">
+                  Document being updated
+                </div>
+              )}
             </div>
           </aside>
         </div>

@@ -3,7 +3,7 @@ import { AppModule } from '../types';
 
 export const PAGE_METADATA: Record<AppModule, { title: string; description: string; robots?: string; path?: string }> = {
   [AppModule.HOME]: {
-    title: "JB³Ai | Managed AI Operating System for Business",
+    title: "JB³ | Managed Ai Operating System for Business",
     description: "A unified operating environment for intelligence, production, and security. OS³ Dash brings clarity, control, and governed access to modern work.",
     path: ""
   },

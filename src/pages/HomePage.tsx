@@ -1,15 +1,11 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Zap, ArrowUpRight } from 'lucide-react';
 import { AppModule } from '../types';
 import { CtaBlock } from '../components/ui/CtaBlock';
 import { Divider } from '../components/ui/Divider';
 import { SectionVisual } from '../components/sections/SectionVisual';
 import { FadeIn } from '../components/ui/FadeIn';
-import { ModuleGrid } from '../components/ModuleGrid';
-import { BrochureButton } from '../components/BrochureButton';
-import { EcosystemImpact } from '../components/EcosystemImpact';
+import { FLAGSHIP_MODULES, ModuleGrid } from '../components/ModuleGrid';
 
 interface HomePageProps {
     onNavigate: (m: AppModule) => void;
@@ -100,48 +96,49 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 </div>
 
                 <div className="hero-fg hero-content relative z-10 pointer-events-auto">
-                    <FadeIn className="space-y-12">
-                        <div className="inline-flex items-center gap-3 px-4 py-2 bg-slate-900/50 border border-slate-800 rounded-full text-xs font-bold text-slate-300 uppercase tracking-[0.3em] mb-4">
-                            <Zap className="w-4 h-4 text-amber-300" /> OS³ Stable v2.0
+                    <FadeIn className="space-y-8 md:space-y-10">
+                        <div className="inline-flex items-center px-4 py-2 bg-slate-900/50 border border-slate-800 rounded-full text-xs font-bold text-slate-300 uppercase tracking-[0.3em] mb-2">
+                            JB³AI / BUSINESS INTELLIGENCE + SYSTEMS
                         </div>
                         <motion.h1
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                            className="hero-title text-jb3-light text-4xl md:text-5xl font-bold tracking-tighter uppercase leading-[0.9] max-w-4xl mx-auto drop-shadow-2xl"
+                            className="hero-title text-jb3-light text-4xl md:text-5xl font-bold tracking-tighter leading-[0.95] max-w-4xl mx-auto drop-shadow-2xl"
                         >
-                            JB³Ai: The OS³ Enterprise Intelligence Architecture
+                            Technology alone doesn't transform a business.
+                            <span className="block">The right system does.</span>
                         </motion.h1>
-                        <p className="hero-subtitle text-jb3-coolgray text-base md:text-lg max-w-2xl mx-auto font-light leading-relaxed drop-shadow-lg mt-4">
-                            A containerized, managed AI operating system deploying specialized modules for forensic analysis, automated workflows, secure communications, and high-impact social initiatives.
+                        <p className="hero-subtitle text-jb3-coolgray text-base md:text-lg max-w-3xl mx-auto font-light leading-relaxed drop-shadow-lg">
+                            JB³Ai combines strategic advisory, business analysis and OS³, our managed AI operating environment, to help organisations understand what they need, build the right systems and operate them intelligently.
                         </p>
-                        <p className="text-gray-300 text-sm md:text-base max-w-2xl mx-auto leading-7 mt-6">
-                            Welcome to the next evolution of corporate intelligence. Powered by our proprietary OS³ architecture, JB³Ai delivers a robust, secure ecosystem designed to handle demanding enterprise workloads without compromising on data sovereignty or speed. Our upgraded suite of six core applications is engineered to optimize every facet of your organization. Beyond operational excellence, our architecture powers accessible, AI-driven education across South Africa through integrated CSR initiatives.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-6 items-center pt-12">
+                        <div className="space-y-4 text-gray-300 text-sm md:text-base max-w-3xl mx-auto leading-7">
+                            <p>
+                                We start with the business, not the software. We identify the bottlenecks, risks, repetitive work and opportunities, then design the right combination of AI, automation, intelligence tools and human oversight around the organisation.
+                            </p>
+                            <p>
+                                From a single specialised application to a connected operating environment, JB³Ai brings advisory, technology and execution into one practical system.
+                            </p>
+                        </div>
+                        <div className="flex flex-wrap justify-center gap-6 items-center pt-6 md:pt-8">
                             <motion.button
+                                type="button"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => {
-                                    const section = document.getElementById('applications');
-                                    if (section) {
-                                        section.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                }}
+                                onClick={() => onNavigate(AppModule.OS3_INFO)}
                                 className="btn-primary px-8 py-3 text-[10px] font-bold uppercase tracking-widest transition-colors"
                             >
-                                Explore OS³ Suite
+                                Explore OS³
                             </motion.button>
-                            <motion.a
+                            <motion.button
+                                type="button"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                href="https://jonoblackburn.com/os"
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                onClick={() => onNavigate(AppModule.CONSULTING)}
                                 className="border border-slate-700 text-slate-100 px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-slate-800 transition-all"
                             >
-                                Access Live Demo
-                            </motion.a>
+                                Book a Consultation
+                            </motion.button>
                         </div>
                     </FadeIn>
                 </div>
@@ -306,13 +303,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                             </h2>
                         </FadeIn>
                         <FadeIn>
-                            <p className="text-xs text-gray-600 uppercase tracking-[0.4em] font-bold">Six core modules for enterprise intelligence and social impact</p>
+                            <p className="text-xs text-gray-400 uppercase tracking-[0.25em] font-bold">The core systems that connect into the OS³ operating environment.</p>
                         </FadeIn>
                     </div>
 
-                        <ModuleGrid onNavigate={onNavigate} />
+                    <ModuleGrid onNavigate={onNavigate} modules={FLAGSHIP_MODULES} />
 
-                            <EcosystemImpact />
+                    <FadeIn className="flex justify-center md:justify-start">
+                        <button
+                            type="button"
+                            onClick={() => onNavigate(AppModule.APPS_LIST)}
+                            className="border border-slate-700 bg-slate-950 px-6 py-3 text-[10px] font-bold uppercase tracking-widest text-slate-100 transition-colors hover:border-slate-600 hover:bg-slate-800"
+                        >
+                            View All Products
+                        </button>
+                    </FadeIn>
                 </div>
             </section>
 

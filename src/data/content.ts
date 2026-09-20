@@ -12,9 +12,9 @@ export const PAGE_METADATA: Record<AppModule, { title: string; description: stri
     description: "OS³ Dash is a unified system for business intelligence, media production, and secure access. Designed for clarity, governance, and scale.",
     path: "os3"
   },
-  [AppModule.APPS_LIST]: {
-    title: "Applications | JB³Ai",
-    description: "Explore JB³Ai applications integrated into OS³ Dash, including Investigator AI, Shield AI, and MindCare AI.",
+    [AppModule.APPS_LIST]: {
+    title: "Products | JB³Ai",
+    description: "Explore the wider JB³Ai portfolio of intelligence systems, communication platforms, education technology and purpose-built AI products.",
     path: "apps"
   },
   [AppModule.SERVICES_HUB]: {
@@ -260,8 +260,8 @@ export const getStructuredData = (module: AppModule) => {
     schemas.push(breadcrumb([{ name: "Home", item: "" }, { name: "OS³ Dash", item: "os3" }]));
   }
 
-  if (module === AppModule.APPS_LIST) {
-    schemas.push(breadcrumb([{ name: "Home", item: "" }, { name: "Applications", item: "apps" }]));
+    if (module === AppModule.APPS_LIST) {
+    schemas.push(breadcrumb([{ name: "Home", item: "" }, { name: "Products", item: "apps" }]));
   }
 
   if (module === AppModule.SERVICES_HUB) {

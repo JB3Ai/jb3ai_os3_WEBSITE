@@ -101,11 +101,10 @@ export const GenericDetailPage: React.FC<GenericDetailPageProps> = ({ module, on
                         <div className="pt-8">
                             {(() => {
                                 let bKey: BrochureKey | undefined;
-                                if (module === AppModule.MINDCARE_AI) bKey = 'mindcare';
                                 if (module === AppModule.INVESTIGATOR_AI) bKey = 'investigator';
                                 if (module === AppModule.PHONE_SYSTEM) bKey = 'voicegrid';
                                 if (module === AppModule.ACCELERATOR || module === AppModule.CONSULTING) bKey = 'consulting';
-                                return <BrochureButton k={bKey} />;
+                                return bKey ? <BrochureButton k={bKey} /> : null;
                             })()}
                         </div>
                     </FadeIn>
@@ -160,12 +159,11 @@ export const GenericDetailPage: React.FC<GenericDetailPageProps> = ({ module, on
 
                             {(() => {
                                 let bKey: BrochureKey | undefined;
-                                if (module === AppModule.MINDCARE_AI) bKey = 'mindcare';
                                 if (module === AppModule.SHIELD_AI) bKey = 'shield';
                                 if (module === AppModule.INVESTIGATOR_AI) bKey = 'investigator';
                                 if (module === AppModule.PHONE_SYSTEM) bKey = 'voicegrid';
                                 if (module === AppModule.ACCELERATOR || module === AppModule.CONSULTING) bKey = 'consulting';
-                                return <BrochureButton k={bKey} />;
+                                return bKey ? <BrochureButton k={bKey} /> : null;
                             })()}
                         </div>
                         <motion.button

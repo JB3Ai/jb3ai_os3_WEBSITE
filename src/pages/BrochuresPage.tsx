@@ -1,114 +1,8 @@
-// @ts-nocheck
 import React, { useState, useEffect } from 'react';
 import { InteractiveBackground } from '../components/InteractiveBackground';
-import { SectionHeader } from '../components/ui/SectionHeader';
 import { AppModule } from '../types';
 import { ArrowLeft, Download, Eye } from 'lucide-react';
-
-interface Brochure {
-    id: string;
-    title: string;
-    category: string;
-    description: string;
-    pdfUrl: string;
-    fileSize: string;
-    isFeatured?: boolean;
-    imageUrl?: string;
-}
-
-// Brochures metadata matched to public/assets/pdfs/ directory
-const BROCHURES: Brochure[] = [
-    {
-        id: 'os3-dash',
-        title: 'OS³ Dash',
-        category: 'Enterprise Operations',
-        description: 'The modular AI operating system designed for enterprise-scale integration and real-time operational efficiency.',
-        pdfUrl: '/assets/pdfs/JB³ OS³ Dash The Operating SystemF1.pdf',
-        fileSize: '23.8 MB',
-        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 'investigator-ai',
-        title: 'InvestigatorAi',
-        category: 'Legal & Compliance',
-        description: 'Advanced forensic intelligence platform for deep-dive investigations and automated evidence synthesis.',
-        pdfUrl: '/assets/pdfs/FINAL V2 JB³Ai Forensic Intelligence Systems Overview F1.pdf',
-        fileSize: '9.3 MB',
-        imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 'shield-ai',
-        title: 'ShieldAi',
-        category: 'Cybersecurity Teams',
-        description: 'Silent, proactive protection layering that neutralizes threats before they reach your core infrastructure.',
-        pdfUrl: '/assets/pdfs/Dual-Layer-Intelligencetar-JBF1.pdf',
-        fileSize: '21.5 MB',
-        imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1470&auto=format&fit=crop"
-    },
-    {
-        id: 'voice-grid',
-        title: 'OS³ Voice Grid',
-        category: 'Communications',
-        description: 'Intelligent, ultra-low latency voice architecture seamlessly integrating natural language processing at the edge.',
-        pdfUrl: '/assets/pdfs/OS³ VOICEGRID CUTSHEET.pdf',
-        fileSize: '22.3 MB',
-        imageUrl: "https://images.unsplash.com/photo-1588600878108-578307a3cc9d?q=80&w=2076&auto=format&fit=crop"
-    },
-    {
-        id: 'mindcare-ai',
-        title: 'MindCareAi',
-        category: 'Healthcare & Wellness',
-        description: 'A sophisticated personal growth framework powered by adaptive neural networks for emotional intelligence.',
-        pdfUrl: '/assets/pdfs/OS³ ISIKOLOAI CUTSHEET.pdf',
-        fileSize: '22.7 MB',
-        imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1965&auto=format&fit=crop"
-    },
-    {
-        id: 'intelligence-managed',
-        title: 'Intelligence Managed',
-        category: 'Managed Services',
-        description: 'Discover how our fully managed intelligence services seamlessly adapt to power your most critical business operations.',
-        pdfUrl: '/assets/pdfs/OS³ Core Platform Briefings WEB F1.pdf',
-        fileSize: '7.8 MB',
-        imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 'consulting',
-        title: 'Consulting & Accelerator',
-        category: 'Innovation Leaders',
-        description: 'Accelerating AI transformation through strategic roadmaps and high-impact deployment frameworks.',
-        pdfUrl: '/assets/pdfs/JB3_Consulting & Accelerator_F1.pdf',
-        fileSize: '12.3 MB',
-        imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 'executive-deck',
-        title: 'Executive Deck',
-        category: 'Strategic Partners',
-        description: 'A comprehensive high-level overview of the OS³ platform capabilities for executive leadership and strategic planning.',
-        pdfUrl: '/assets/pdfs/JB3_Business_Intelligence_Reports_Catalogue_2026_v2_F1.pdf',
-        fileSize: '7.6 MB',
-        imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 'investment-deck',
-        title: 'Investment Deck',
-        category: 'Qualified Investors',
-        description: "A comprehensive overview of JB³Ai's trajectory, valuation, and market-disrupting technology stack.",
-        pdfUrl: '/assets/pdfs/JBInvestment Intelligence in MotionV2_F!.pdf',
-        fileSize: '27.2 MB',
-        imageUrl: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop"
-    },
-    {
-        id: 'intel-motion',
-        title: 'Intelligence in Motion',
-        category: 'Strategic Partners',
-        description: 'A strategic profile exploring the convergence of kinetic motion and artificial intelligence.',
-        pdfUrl: '/assets/pdfs/Global Satellite Overlay The Sentinel EyeF1.pdf',
-        fileSize: '13.1 MB',
-        imageUrl: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2070&auto=format&fit=crop"
-    }
-];
+import { getDocumentDownloadName, isDocumentAvailable, LIBRARY_DOCUMENTS } from '../content/brochures';
 
 interface BrochuresPageProps {
     onNavigate: (module: AppModule) => void;
@@ -179,7 +73,7 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
 
             <div className="fixed top-0 left-0 right-0 z-50 px-6 py-6 transition-all duration-300">
                 <div className="max-w-7xl mx-auto flex justify-between items-center">
-                    <button onClick={() => onNavigate('home')} className="group flex items-center gap-3 text-xs font-bold tracking-[0.2em] text-[#9AA3AD] hover:text-white transition-colors uppercase">
+                    <button type="button" onClick={() => onNavigate(AppModule.HOME)} className="group flex items-center gap-3 text-xs font-bold tracking-[0.2em] text-[#9AA3AD] hover:text-white transition-colors uppercase">
                         <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-[#66FF66] group-hover:bg-[#66FF66] transition-all duration-300">
                             <ArrowLeft className="w-3 h-3 text-[#9AA3AD] group-hover:text-black transition-colors" />
                         </div>
@@ -190,9 +84,9 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
 
             <div className="relative z-10 pt-32 pb-20 flex flex-col items-center text-center">
                 <h1 className="font-orbitron font-bold tracking-tight text-4xl md:text-6xl lg:text-7xl text-white mb-4">
-                    DOWNLOAD JB³Ai BROCHURES
+                    JB³Ai LIBRARY
                 </h1>
-                <p className="inline-block mt-4 px-4 py-2 bg-white/95 text-black text-xs tracking-[0.2em] uppercase rounded-md shadow-sm">Enterprise Intelligence Documentation</p>
+                <p className="mx-6 mt-4 max-w-3xl rounded-md bg-white/95 px-4 py-2 text-xs uppercase tracking-[0.2em] text-black shadow-sm">Product briefs, technical documents, corporate material and intelligence resources.</p>
             </div>
 
             <section className="relative z-10 -mt-10 px-6 pb-10">
@@ -229,7 +123,7 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
             <section className={`relative z-10 py-10 border-t border-white/5 transition-all duration-1000 delay-300 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="max-w-6xl mx-auto px-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {BROCHURES.map((brochure, idx) => (
+                        {LIBRARY_DOCUMENTS.map((brochure, idx) => (
                             <div
                                 key={brochure.id}
                                 className="glass rounded-3xl h-full group hover:shadow-2xl hover:shadow-[#66FF66]/10 transition-all duration-700 hover:border-[#66FF66]/40 relative overflow-hidden"
@@ -260,7 +154,7 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
                                             />
                                         </div>
                                         <div className="flex flex-col items-end">
-                                            <span className="text-[9px] font-black uppercase tracking-[0.2em] text-[#66FF66] mb-1">{brochure.fileSize}</span>
+                                            <span className="mb-1 text-right text-[9px] font-black uppercase tracking-[0.2em] text-[#66FF66]">{brochure.fileSize ?? brochure.category}</span>
                                             <span className="text-[8px] font-bold uppercase tracking-[0.1em] text-white/20">Ref: {brochure.id.slice(0, 4)}</span>
                                         </div>
                                     </div>
@@ -269,23 +163,29 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
                                     <p className="text-white/80 leading-relaxed mb-5 flex-grow text-[11px] font-medium max-w-[95%] group-hover:text-white transition-colors duration-500">
                                         {brochure.description}
                                     </p>
-                                    <div className="flex gap-2 mt-auto">
-                                        <a
-                                            href={brochure.pdfUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex-1 py-2 flex items-center justify-center gap-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-[8px] font-black uppercase tracking-[0.2em] transition-all duration-300 border border-white/5 text-[#9AA3AD] hover:text-white"
-                                        >
-                                            <Eye className="w-3.5 h-3.5" /> Preview
-                                        </a>
-                                        <a
-                                            href={brochure.pdfUrl}
-                                            download
-                                            className="flex-1 py-2 flex items-center justify-center gap-1.5 rounded-lg bg-[#66FF66] hover:brightness-110 text-black text-[8px] font-black uppercase tracking-[0.2em] transition-all duration-300 shadow-xl shadow-[#66FF66]/10 hover:shadow-[#66FF66]/30 hover:-translate-y-1"
-                                        >
-                                            <Download className="w-3.5 h-3.5" /> Download
-                                        </a>
-                                    </div>
+                                    {isDocumentAvailable(brochure) ? (
+                                        <div className="mt-auto flex gap-2">
+                                            <a
+                                                href={brochure.pdfUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-white/5 bg-white/5 py-2 text-[8px] font-black uppercase tracking-[0.2em] text-[#9AA3AD] transition-all duration-300 hover:bg-white/10 hover:text-white"
+                                            >
+                                                <Eye className="h-3.5 w-3.5" /> Preview
+                                            </a>
+                                            <a
+                                                href={brochure.pdfUrl}
+                                                download={getDocumentDownloadName(brochure)}
+                                                className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-[#66FF66] py-2 text-[8px] font-black uppercase tracking-[0.2em] text-black shadow-xl shadow-[#66FF66]/10 transition-all duration-300 hover:-translate-y-1 hover:brightness-110 hover:shadow-[#66FF66]/30"
+                                            >
+                                                <Download className="h-3.5 w-3.5" /> Download
+                                            </a>
+                                        </div>
+                                    ) : (
+                                        <div className="mt-auto rounded-lg border border-white/10 bg-black/40 px-3 py-2 text-center text-[9px] font-black uppercase tracking-[0.18em] text-white/50" role="status">
+                                            Document being updated
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         ))}
@@ -330,8 +230,3 @@ export const BrochuresPage: React.FC<BrochuresPageProps> = ({ onNavigate }) => {
         </div>
     );
 };
-
-// Simple icon component to avoid extra imports if not needed, using Lucide for main ones
-const ViewIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /></svg>
-);

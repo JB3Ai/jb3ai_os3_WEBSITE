@@ -3,7 +3,6 @@ import React from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AppModule } from '../types';
-import { BROCHURES } from '../content/brochures';
 import { CorporateFooter } from '../components/CorporateFooter';
 
 interface MarketingLayoutProps {
@@ -19,9 +18,6 @@ interface MarketingLayoutProps {
 export const MarketingLayout: React.FC<MarketingLayoutProps> = ({
   children, activeModule, navigate, isMenuOpen, setIsMenuOpen, fontSize, setFontSize
 }) => {
-  // Simple mobile detection for loading appropriate attributes if needed later
-  const isMobile = typeof navigator !== 'undefined' && /Mobi|Android/i.test(navigator.userAgent);
-
   return (
     <div className={`w-full min-h-screen text-gray-300 flex flex-col font-sans selection:bg-white selection:text-black relative font-${fontSize}`}>
 
@@ -181,7 +177,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({
           {children}
         </main>
 
-        <CorporateFooter />
+        <CorporateFooter onNavigate={navigate} />
       </div>
     </div>
   );
