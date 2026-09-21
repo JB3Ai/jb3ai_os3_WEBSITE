@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppModule } from '../types';
+import { openConsultation } from '../utils/consultation';
 
 interface CorporateFooterProps {
   onNavigate: (module: AppModule) => void;
@@ -17,7 +18,7 @@ export const CorporateFooter: React.FC<CorporateFooterProps> = ({ onNavigate }) 
 
         <nav className="flex flex-wrap items-center justify-center gap-6 font-mono text-[11px]" aria-label="Footer navigation">
           <button type="button" onClick={() => onNavigate(AppModule.OS3_INFO)} className="hover:text-slate-300 transition-colors">OS³</button>
-          <button type="button" onClick={() => onNavigate(AppModule.CONSULTING)} className="hover:text-slate-300 transition-colors">ADVISORY</button>
+          <button type="button" onClick={() => openConsultation(onNavigate)} className="hover:text-slate-300 transition-colors">ADVISORY</button>
           <button type="button" onClick={() => onNavigate(AppModule.BROCHURES)} className="hover:text-slate-300 transition-colors">LIBRARY</button>
           <a href="https://jonoblackburn.com/os" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">OS3 DEMO</a>
           <a href="https://github.com/JB3Ai/jb3ai_os3_WEBSITE" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors">GITHUB REPO</a>

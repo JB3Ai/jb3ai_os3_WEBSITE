@@ -4,6 +4,7 @@ import { DashboardBackdrop } from '../components/ui/DashboardBackdrop';
 import { SectionHeader } from '../components/ui/SectionHeader';
 import { FadeIn } from '../components/ui/FadeIn';
 import { BrochureButton } from '../components/BrochureButton';
+import { openConsultation } from '../utils/consultation';
 
 interface OS3DashInfoPageProps {
     onNavigate: (module: AppModule) => void;
@@ -141,7 +142,7 @@ export const OS3DashInfoPage: React.FC<OS3DashInfoPageProps> = ({ onNavigate }) 
                     </div>
                     <div className="flex flex-col gap-4 sm:flex-row md:flex-col">
                         <button onClick={() => onNavigate(AppModule.WORKSPACE)} className="bg-cyan-400 px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-black transition-colors hover:bg-white">View OS³ Demo</button>
-                        <button onClick={() => onNavigate(AppModule.CONSULTING)} className="border border-white/20 px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-white transition-colors hover:border-cyan-400 hover:text-cyan-300">Book a Consultation</button>
+                        <button onClick={() => openConsultation(onNavigate)} className="border border-white/20 px-7 py-4 text-xs font-bold uppercase tracking-[0.18em] text-white transition-colors hover:border-cyan-400 hover:text-cyan-300">Book a Consultation</button>
                     </div>
                 </FadeIn>
             </section>

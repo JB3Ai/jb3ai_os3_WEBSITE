@@ -3,6 +3,7 @@ import { ArrowUpRight, FileText, Play } from 'lucide-react';
 import { AppModule } from '../types';
 import { BROCHURES, isDocumentAvailable } from '../content/brochures';
 import { ProductPortfolioCategory, ProductPortfolioItem } from '../content/products';
+import { openConsultation } from '../utils/consultation';
 
 interface ProductPortfolioGridProps {
     category: ProductPortfolioCategory;
@@ -64,7 +65,7 @@ export const ProductPortfolioGrid: React.FC<ProductPortfolioGridProps> = ({ cate
                                 ) : (
                                     <button
                                         type="button"
-                                        onClick={() => onNavigate(AppModule.CONSULTING)}
+                                        onClick={() => openConsultation(onNavigate)}
                                         className={`${actionClass} border-slate-600 bg-slate-100 text-slate-950 hover:bg-white`}
                                     >
                                         Learn More <ArrowUpRight className="h-3.5 w-3.5" />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppModule } from '../../types';
+import { openConsultation } from '../../utils/consultation';
 
 interface CtaBlockProps {
     onNavigate: (module: AppModule) => void;
@@ -20,10 +21,10 @@ export function CtaBlock({ onNavigate, type = 'default', className = '' }: CtaBl
                     Initialize Workspace
                 </button>
                 <button
-                    onClick={() => onNavigate(AppModule.CONSULTING)}
+                    onClick={() => openConsultation(onNavigate)}
                     className="border border-white/20 text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-white/10 transition-colors"
                 >
-                    Consulting
+                    Book a Consultation
                 </button>
             </div>
         </div>

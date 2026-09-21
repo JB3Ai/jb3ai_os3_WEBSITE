@@ -4,6 +4,7 @@ import { DashboardBackdrop } from '../components/ui/DashboardBackdrop';
 import { FadeIn } from '../components/ui/FadeIn';
 import { ProductPortfolioGrid } from '../components/ProductPortfolioGrid';
 import { PRODUCT_PORTFOLIO, PRODUCT_PORTFOLIO_CATEGORIES } from '../content/products';
+import { openConsultation } from '../utils/consultation';
 
 interface AppsListPageProps {
     onNavigate: (module: AppModule) => void;
@@ -52,7 +53,7 @@ export const AppsListPage: React.FC<AppsListPageProps> = ({ onNavigate }) => (
                     </div>
                     <button
                         type="button"
-                        onClick={() => onNavigate(AppModule.CONSULTING)}
+                        onClick={() => openConsultation(onNavigate)}
                         className="inline-flex min-h-11 items-center justify-center border border-slate-600 bg-slate-100 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.22em] text-slate-950 transition-colors hover:bg-white"
                     >
                         Book a Consultation

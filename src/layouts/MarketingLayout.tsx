@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AppModule } from '../types';
 import { CorporateFooter } from '../components/CorporateFooter';
+import { openConsultation } from '../utils/consultation';
 
 interface MarketingLayoutProps {
   children: React.ReactNode;
@@ -91,7 +92,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({
                 VVault
               </button>
               <button
-                onClick={() => navigate(AppModule.CONSULTING)}
+                onClick={() => openConsultation(navigate)}
                 className={`px-[10px] py-[12px] hover:text-white/95 hover:drop-shadow-[0_0_12px_rgba(102,255,102,0.18)] transition-all uppercase ${activeModule === AppModule.CONSULTING ? 'text-white/95 drop-shadow-[0_0_12px_rgba(102,255,102,0.18)]' : ''}`}
               >
                 Advisory
@@ -115,7 +116,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => navigate(AppModule.CONSULTING)}
+                onClick={() => openConsultation(navigate)}
                 className={`text-[10px] font-bold uppercase tracking-widest border border-gray-800 px-6 py-3 hover:bg-white/5 transition-all text-gray-400 hover:text-white`}
               >
                 Book Expert Advisor

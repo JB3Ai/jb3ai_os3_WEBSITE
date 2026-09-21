@@ -6,6 +6,7 @@ import { Divider } from '../components/ui/Divider';
 import { SectionVisual } from '../components/sections/SectionVisual';
 import { FadeIn } from '../components/ui/FadeIn';
 import { FLAGSHIP_MODULES, ModuleGrid } from '../components/ModuleGrid';
+import { openConsultation } from '../utils/consultation';
 
 interface HomePageProps {
     onNavigate: (m: AppModule) => void;
@@ -134,7 +135,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                                 type="button"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => onNavigate(AppModule.CONSULTING)}
+                                onClick={() => openConsultation(onNavigate)}
                                 className="border border-slate-700 text-slate-100 px-8 py-3 text-[10px] font-bold uppercase tracking-widest hover:bg-slate-800 transition-all"
                             >
                                 Book a Consultation
